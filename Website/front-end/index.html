@@ -15,25 +15,22 @@
     <title>quarantineAQI</title>
   </head>
   <body>
-    <h1>Hello, world!</h1>
-
     
     <div id='map' style='width: 800px; height: 800px;'></div>
-
 
     <script>
     mapboxgl.accessToken = 'pk.eyJ1IjoiaGV5aGFpZGVuIiwiYSI6ImNsOWd5d2kzYTJjNm0zd3F0Y3JpYjBzbHkifQ.n54i9juDJo3yjB5iFuHohA';
     const map = new mapboxgl.Map({
         container: 'map', // container ID
         style: 'mapbox://styles/heyhaiden/cl9obhcq600mg15l381brmm4n', // style URL
-        center: [51.515, -0.087], // starting position [lng, lat]
+        center: [-118.24, 34.0522], // starting position [lng, lat]
         zoom: 11, // starting zoom
-   
     });
     map.on('style.load', () => {
         map.setFog({}); // Set the default atmosphere style
     });
     </script>
+    
 
     
 
