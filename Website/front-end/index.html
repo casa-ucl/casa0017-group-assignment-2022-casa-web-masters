@@ -16,16 +16,16 @@
 
   </head>
   <body>
-    
+  <!-- nav bar from https://getbootstrap.com/docs/5.1/components/navbar/ -->
     <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
         <div class="container-fluid">
-          <a class="navbar-brand" href="#">quarantineAQI</a>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
+          <a class="navbar-brand" href="index.html">quarantineAQI</a>
+          <!-- <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span> -->
           </button>
           
             <ul class="nav nav-pills">
-                <li class="nav-item"><a href="#" class="nav-link active" aria-current="page"></a></li>
+                <!--<li class="nav-item"><a href="#" class="nav-link active" aria-current="page"></a></li> -->
                 <li class="nav-item"><a href="#" class="nav-link">Team</a></li>
                 <li class="nav-item"><a href="#" class="nav-link">About</a></li>
                 <li class="nav-item"><a href="#" class="nav-link">Resources</a></li>     
@@ -37,12 +37,13 @@
       
     
     
-    <div id='map' style='width: 800px; height: 800px;'></div>
+    <div id='map1' style='width: 800px; height: 800px;'></div>
+    <!-- <div id='map2' style='width: 800px; height: 800px;'></div> -->
 
     <script>
     mapboxgl.accessToken = 'pk.eyJ1IjoiaGV5aGFpZGVuIiwiYSI6ImNsOWd5d2kzYTJjNm0zd3F0Y3JpYjBzbHkifQ.n54i9juDJo3yjB5iFuHohA';
     const map = new mapboxgl.Map({
-        container: 'map', // container ID
+        container: 'map1', // container ID
         style: 'mapbox://styles/heyhaiden/cl9obhcq600mg15l381brmm4n', // style URL
         center: [-118.24, 34.0522], // starting position [lng, lat]
         zoom: 11, // starting zoom
@@ -51,8 +52,21 @@
         map.setFog({}); // Set the default atmosphere style
     });
     </script>
-    
 
+    <!--
+    <script>
+    mapboxgl.accessToken = 'pk.eyJ1IjoiaGV5aGFpZGVuIiwiYSI6ImNsOWd5d2kzYTJjNm0zd3F0Y3JpYjBzbHkifQ.n54i9juDJo3yjB5iFuHohA';
+    const map = new mapboxgl.Map({
+        container: 'map2', // container ID
+        style: 'mapbox://styles/heyhaiden/cl9obhcq600mg15l381brmm4n', // style URL
+        center: [-118.24, 34.0522], // starting position [lng, lat]
+        zoom: 11, // starting zoom
+    });
+    map.on('style.load', () => {
+        map.setFog({}); // Set the default atmosphere style
+    });
+    </script>
+    -->
     
 
     <!-- JS scripts under here -->
