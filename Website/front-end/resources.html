@@ -34,6 +34,22 @@
       });
     </script>
   <!-- end of nav bar -->
+
+  <!-- footer bar -->
+    <!-- placeholder to be replaced with footer bar -->
+    <div class="footPlaceholder">
+
+    </div>
+
+    <!-- jquery to get footer bar from footerBar.html -->
+    <script>
+      // gets footer bar and places it in footerBar
+      $.get("pageElements/footerBar.html", function(footerBar){
+        // replaces footPlaceholder with footerBar
+        $(".footPlaceholder").replaceWith(footerBar);
+      });
+    </script>
+    <!-- end of footer bar -->
     
 
     <!-- JS scripts under here -->
