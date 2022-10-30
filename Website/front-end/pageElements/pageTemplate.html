@@ -34,7 +34,21 @@
       });
     </script>
   <!-- end of nav bar -->
-    
+
+  <!-- main content -->
+
+  <!-- footer -->
+    <div class="footerPlaceholder">
+
+    </div>
+
+    <script>
+      $.get("pageElements/footer.html", function(footer){
+        $(".footerPlaceholder").replaceWith(footer);
+      });
+    </script>
+
+  <!-- end of footer -->
 
     <!-- JS scripts under here -->
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
