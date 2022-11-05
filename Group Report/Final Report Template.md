@@ -8,9 +8,9 @@ date: "10 Dec 2020"
 
 -->
 
-# Final Group Report Title Goes Here
+# quarantineAQI: Visualizing the effects of 2020 lockdown policy on PM₂.₅ air quality measurements in Los Angeles and London
 
-Team Name or Group Authors
+Gil Adda, Andre Bourgeois, Haiden McGill, Patrick Whyte
 
 ## Abstract
 
