@@ -17,6 +17,10 @@
     <!-- Jquery -->
     <script type="text/javascript" src="https://code.jquery.com/jquery-3.5.1.js"></script>
 
+    <!-- Timeline -->
+    <script type="text/javascript" src="../node_modules/timelinejs-slider/dist/js/timeline.min.js"></script>
+    <link type="stylesheet" href="../node_modules/timelinejs-slider/dist/css/timeline.min.css">
+
   </head>
   <body>
   <!-- nav bar -->
@@ -82,7 +86,28 @@
           </script>
         </div>
       </div>
+      <div class="row">
+        <div class="col-12">
+          <div class="map-overlay top">
+            <div class="map-overlay-inner">
+              <h2>Air Quality Timeline</h2>
+              <label id="day"></label>
+              <input id="slider" type="range" min="0" max="200" step="1" value="0" style="width: 100%">
+            </div>
+            <div class="map-overlay-inner">
+              <div id="legend" class="legend">
+                <div class="bar"></div>
+                <div>Parts Per Million (PPM)</div>
+              </div>
+            </div>
+          </div>
+        </div>
+           
+        <script src="https://d3js.org/d3.v3.min.js" charset="utf-8"></script>
+      </div>
     </div>
+
+    <!-- end of main content-->
     
     <!-- footer bar -->
     <!-- placeholder to be replaced with footer bar -->
