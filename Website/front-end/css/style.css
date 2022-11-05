@@ -9,3 +9,31 @@ body {
     bottom: 0; 
     width: 100%;
 } 
+
+.main-photos-container {
+    display: flex;
+}
+
+.row {
+    flex-direction: column;
+    flex-wrap: nowrap;
+}
+
+.description {
+    padding-top: 15px;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+}
+
+.img-div{ 
+    max-width: 82.333333%;
+    max-height: 43%;
+}
+
+.footer-container {
+    display: flex;
+    flex-direction: row;
+}
