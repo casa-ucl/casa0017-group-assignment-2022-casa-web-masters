@@ -51,7 +51,7 @@ var config = {
             alignment: 'left',
             hidden: false,
             title: 'Los Angeles County, California',
-            image: '/assets/losangeles_chapter1.webp',
+            image: '/img/losangeles_chapter1.webp',
             description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
             location: {
                 center: [-118.32409, 34.03083],
@@ -83,7 +83,7 @@ var config = {
             alignment: 'left',
             hidden: false,
             title: 'Los Angeles County, California',
-            //image: '/assets/losangeles_chapter1.webp',
+            //image: '/img/losangeles_chapter1.webp',
             description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
             location: {
                 center: [-118.32560, 33.90192],
@@ -114,7 +114,7 @@ var config = {
             alignment: 'left',
             hidden: true,
             title: 'Los Angeles County, California',
-            //image: '/assets/losangeles_chapter1.webp',
+            //image: '/img/losangeles_chapter1.webp',
             description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
             location: {
                 center: [-118.32560, 33.90192],
