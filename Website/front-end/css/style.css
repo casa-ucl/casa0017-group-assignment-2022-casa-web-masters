@@ -37,3 +37,6 @@ body {
     display: flex;
     flex-direction: row;
 }
+.container-custom .card-img-top{
+    max-height: 180px;
+}
