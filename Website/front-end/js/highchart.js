@@ -11,12 +11,14 @@ Highcharts.chart("container", {
   },
 
   subtitle: {
-    text: "Source: AQICN.org"
+    text: 'Source: ' +
+      '<a href="https://aqicn.org/data-platform/covid19"' +
+      'target="_blank">AQICN.org</a>'
   },
 
   xAxis: {
     crosshair: {
-      width: 2
+      width: 1
     }
   },
 
@@ -98,7 +100,7 @@ Highcharts.chart("container", {
         enabled: false
       },
       label: {
-        connectorAllowed: false
+        connectorAllowed: true
       },
       animation: {
         duration: 1200
