@@ -8,9 +8,9 @@ var config = {
     //inset: false,
     theme: 'dark',
     use3dTerrain: false, //set true for enabling 3D maps.
-    //title: 'quarantineAQI',
-    subtitle: 'Visualizing the effects of lockdown policy on PM₂.₅ air quality measurements in Los Angeles and London',
-    byline: 'By Gil Adda, Andre Bourgeois, Haiden McGill, Patrick Whyte ',
+    title: '   ',
+    subtitle: 'Visualizing the effects of lockdown policy on PM₂.₅ air quality measurements',
+    byline: 'Los Angeles and London, January - June 2020',
     footer: 'Source: source citations, etc. <br> Created using <a href="https://github.com/mapbox/storytelling" target="_blank">Mapbox Storytelling</a> template.',
     chapters: [
         {
