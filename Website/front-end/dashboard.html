@@ -330,8 +330,11 @@
           <p style="float: right">Air Quality Index Measurements in Parts Per Million (PPM)</p>
         </div>
         <script>
-          //empty array to hold dates from json objects in file
+          //empty array to hold Dates from json objects in file
           let dates = [];
+          //empty array to hold Counts from json objects in file
+          let ppmCounts = [];
+
           //get json file, allocate data to dataLondon
           $.getJSON("../back-end/resources/dataLondon.json", function (dataLondon) {
             //for each object in dataLondon
@@ -353,7 +356,15 @@
             slider.oninput = function () {
               dateText.innerHTML = dates[this.value];
             }
-            // use this to log information for debugging
+
+            //TODO
+            //add layer to maps that uses value from count key in json
+            //layer should initialize with slider.value
+            //layer should update with this.value
+            //Date and Count displayed should come from same object
+            //reference timeline slider mapbox example and flickr photo class example
+
+            //use this to log information for debugging
             console.log(dates[195]);
           });
         </script>
