@@ -11,7 +11,7 @@ var config = {
     title: '   ',
     subtitle: 'Visualizing the effects of lockdown policy on PM₂.₅ air quality measurements',
     byline: 'Los Angeles and London, January - June 2020',
-    footer: 'Source: source citations, etc. <br> Created using <a href="https://github.com/mapbox/storytelling" target="_blank">Mapbox Storytelling</a> template.',
+    //footer: 'Source: source citations, etc. <br> Created using <a href="https://github.com/mapbox/storytelling" target="_blank">Mapbox Storytelling</a> template.',
     chapters: [
         {
             id: 'research-intro',
