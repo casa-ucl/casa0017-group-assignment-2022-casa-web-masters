@@ -98,34 +98,44 @@
         </script>
       </div>
     </div>
-
+    <!--row containing aqi slider-->
     <div class="row">
       <div class="col">
-        <h4 style="padding-bottom: 10px">Air Quality Timeline</h4>
+      <!--container for slider-->
         <div class="slidecontainer">
+          <!--title-->
+          <h4 style="padding-bottom: 10px">Air Quality Timeline</h4>
+          <!--slider-->
           <input type="range" min="0" max="195" value="0" class="slider" id="myRange">
+          <!--displys dates from json file based on slider input-->
           <p style="float: left">Date: <span id="dateValue"></span></p>
           <p style="float: right">Air Quality Index Measurements in Parts Per Million (PPM)</p>
         </div>
         <script>
+          //empty array to hold dates from json objects in file
           let dates = [];
-          
+          //get json file, allocate data to dataLondon
           $.getJSON("../back-end/resources/dataLondon.json", function(dataLondon) {
+            //for each object in dataLondon
             $.each(dataLondon, function(k, v){
+            // create variable date, set it to the value of each Date key
             let date = v.Date;
 
-
+            //push date value onto dates array
             dates.push(date);
+            //this array now contains all the dates from the json file
           });
-          
+          //create variable for slider, allocate to myRange id on page
           let slider = document.getElementById("myRange");
+          //create variable for dateText, allocate to dateValue id - this will display the date
           let dateText = document.getElementById("dateValue");
+          //change dateText(or dataValue) to the slider value on page load
           dateText.innerHTML = dates[slider.value];
-
+          //change dateText(or dateValue) to the slider value on slider input
           slider.oninput = function() {
             dateText.innerHTML = dates[this.value];
           }
-
+          // use this to log information for debugging
             console.log(dates[195]);
           });
         </script>
