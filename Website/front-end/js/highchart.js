@@ -7,7 +7,7 @@ Highcharts.chart("container", {
   },
 
   title: {
-    text: "London Median AQI"
+    text: "Median AQI Measurements"
   },
 
   subtitle: {
