@@ -103,7 +103,8 @@ var config = {
             hidden: false,
             title: 'Los Angeles County, California',
             image: './img/losangeles_chapter1.webp',
-            description: '',
+            description: '<br>"Los Angeles is a city notorious for its smog, a combination of particle and ozone pollution. The prevalence of these pollutants result from many factors, including the burning of fossil fuels, especially by vehicles, ships, planes and manufacturing, as well as wildfires.<br><br>The large population of 4 million in Los Angeles, with another 6 million in the surrounding Los Angeles county, contributes significantly to the its ‘nonattainment’ air quality status because of heavy vehicular emissions and traffic congestion. It is estimated that there are 6.5 million vehicles in the city of Los Angeles alone." <br><br>Source: <a href="https://www.iqair.com/usa/california/los-angeles" target="_blank">www.iqair.com/usa/california/los-angeles</a>',
+            
             location: {
                 center: [-118.32560, 33.90192],
                 zoom: 10.35,
@@ -132,7 +133,7 @@ var config = {
             hidden: true,
             title: 'Los Angeles, California',
             //image: '/img/losangeles_chapter1.webp',
-            description: 'Population - 3.9 Million, Density - 8,304/sq, Car owners- 2,276,974  The lockdown starts: 19th March 2020',
+            description: '',
             location: {
                 center: [-118.32560, 33.90192],
                 zoom: 10.35,
@@ -159,9 +160,9 @@ var config = {
             id: 'la-intro-4',
             alignment: 'left',
             hidden: false,
-            title: 'Los Angeles, California',
+            title: 'Los Angeles County, California',
             //image: '/assets/losangeles_chapter1.webp',
-            description: 'sss',
+            description: 'Something about cleanest air',
             location: {
                 center: [-118.32560, 33.90192],
                 zoom: 10.35,
@@ -173,9 +174,35 @@ var config = {
             callback: '',
             onChapterEnter: [
                 {
-                    layer: 'layer-name',
-                    opacity: 1,
-                    duration: 5000
+                   
+                }
+            ],
+            onChapterExit: [
+                {
+                  
+                }
+            ]
+        },
+
+        {
+            id: 'la-intro-4',
+            alignment: 'left',
+            hidden: false,
+            title: 'Los Angeles, California',
+            //image: '/assets/losangeles_chapter1.webp',
+            description: 'Something about cleanest air',
+            location: {
+                center: [-118.32560, 33.90192],
+                zoom: 10.35,
+                pitch: 45.00,
+                bearing: 0.00
+            },
+            mapAnimation: 'flyTo',
+            rotateAnimation: false,
+            callback: '',
+            onChapterEnter: [
+                {
+                    
                 }
             ],
             onChapterExit: [
