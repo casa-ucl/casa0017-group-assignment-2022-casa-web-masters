@@ -90,7 +90,7 @@ var config = {
             ],
             onChapterExit: [
                 {
-                    layer: 'london-perimeter',
+                    layer:'los-angeles-perimeter',
                     opacity: 1,
                     duration: 3000
                 }
@@ -143,9 +143,7 @@ var config = {
             callback: '',
             onChapterEnter: [
                 {
-                    layer: 'layer-name',
-                    opacity: 1,
-                    duration: 5000
+                    
                 }
             ],
             onChapterExit: [
@@ -208,7 +206,13 @@ var config = {
             mapAnimation: 'flyTo',
             rotateAnimation: false,
             callback: '',
-            onChapterEnter: [],
+            onChapterEnter: [
+                {
+                    layer: 'london-perimeter',
+                    opacity: 1,
+                    duration: 3000
+                }
+            ],
             onChapterExit: []
         },
 
@@ -318,7 +322,7 @@ var config = {
 
         {
             id: 'conclusion-visible',
-            alignment: 'center',
+            alignment: 'right',
             hidden: false,
             title: 'Want to explore more?',
             image: '',
