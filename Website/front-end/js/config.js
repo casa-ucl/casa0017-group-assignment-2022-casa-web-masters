@@ -17,9 +17,9 @@ var config = {
             id: 'research-intro',
             alignment: 'center',
             hidden: false,
-            title: 'Research Question Here',
+            title: 'How quickly does air quality improve when the world shuts down?',
             image: '',
-            description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
+            description: 'The aim of our website is to investigate whether there is any visual or statistical correlation between changes in AQI measurements between London and Los Angeles leading up to and during the beginning of the Coronavirus pandemic in March of 2020. Due to lockdown measures, would a car-centric city have seen a more drastic improvement in its air quality than a non-car-centric city? In order to test this, two cities were chosen that have similarities among total population, population density, and total square footage.',
             location: {
                 center: [-100.08256, 39.07762],
                 zoom: 4.5,
