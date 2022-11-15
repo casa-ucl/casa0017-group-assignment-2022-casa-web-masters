@@ -14,12 +14,12 @@ var config = {
     footer: 'Source: <a href="https://aqicn.org/data-platform/covid19/" target="_blank">COVID-19 Worldwide Air Quality Data Project</a>, <a href="https://github.com/codeforgermany/click_that_hood" target="_blank">Click That Hood</a> <br> Created using <a href="https://github.com/mapbox/storytelling" target="_blank">Mapbox Storytelling</a> template.',
     chapters: [
         {
-            id: 'research-intro',
+            id: 'blank-chapter',
             alignment: 'center',
             hidden: true,
-            title: 'How quickly does air quality improve when the world shuts down?',
+            title: 'xxx?',
             //image: './img/LockdownIntro.webp',
-            description: 'The aim of this website is to investigate whether there is any visual or statistical correlation between changes in fine particulate matter (PM25) measurements between London and Los Angeles leading up to and during the beginning of the Coronavirus pandemic in March of 2020. Due to lockdown measures, would a car-centric city have seen a more drastic improvement in its air quality than a non-car-centric city?',
+            description: 'xxx',
             location: {
                 center: [-100.08256, 39.07762],
                 zoom: 4.5,
@@ -31,18 +31,8 @@ var config = {
             mapAnimation: 'easeTo',
             rotateAnimation: false,
             //callback: '',
-            onChapterEnter: [
-                 {
-                
-                    
-                     
-                 }
-            ],
-            onChapterExit: [
-                 {
-                    
-                 }
-            ]
+            onChapterEnter: [],
+            onChapterExit: []
         },
         
         {
