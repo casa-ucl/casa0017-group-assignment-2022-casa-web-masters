@@ -103,7 +103,7 @@ Highcharts.chart("container", {
         connectorAllowed: true
       },
       animation: {
-        duration: 1200
+        duration: 15000
       }
     }
   },

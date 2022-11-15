@@ -85,14 +85,14 @@ var config = {
             //callback: '',
             onChapterEnter: [
                 {
-
+                    layer:'los-angeles-perimeter',
+                    opacity: 1,
+                    duration: 2500
                 }
             ],
             onChapterExit: [
                 {
-                    layer:'los-angeles-perimeter',
-                    opacity: 1,
-                    duration: 3000
+                    
                 }
             ]
         },
@@ -108,14 +108,15 @@ var config = {
                 center: [-118.32560, 33.90192],
                 zoom: 10.35,
                 pitch: 45.00,
-                bearing: 0.00
+                bearing: 0.00,
+                speed: 0.5
             },
             mapAnimation: 'flyTo',
             rotateAnimation: false,
             callback: '',
             onChapterEnter: [
                 {
-
+                    
                 }
             ],
             onChapterExit: [
@@ -179,8 +180,9 @@ var config = {
             ],
             onChapterExit: [
                 {
-                    layer: 'layer-name',
-                    opacity: 0
+                    layer:'los-angeles-perimeter',
+                    opacity: 0,
+                    duration: 1500
                 }
             ]
         },
@@ -208,12 +210,16 @@ var config = {
             callback: '',
             onChapterEnter: [
                 {
-                    layer: 'london-perimeter',
-                    opacity: 1,
-                    duration: 3000
+                    
                 }
             ],
-            onChapterExit: []
+            onChapterExit: [
+                {
+                    layer: 'london-perimeter',
+                    opacity: 1,
+                    duration: 1500
+                }
+            ]
         },
 
         {
@@ -238,7 +244,11 @@ var config = {
             mapAnimation: 'flyTo',
             rotateAnimation: false,
             callback: '',
-            onChapterEnter: [],
+            onChapterEnter: [
+                {
+                    
+                }
+            ],
             onChapterExit: []
         },
         {
@@ -257,7 +267,13 @@ var config = {
             mapAnimation: 'flyTo',
             rotateAnimation: false,
             callback: '',
-            onChapterEnter: [],
+            onChapterEnter: [
+                {
+                    layer: 'london-perimeter',
+                    opacity: 0.3,
+                    duration: 2500
+                }
+            ],
             onChapterExit: []
         },
 
@@ -316,7 +332,13 @@ var config = {
             mapAnimation: 'flyTo',
             rotateAnimation: false,
             callback: '',
-            onChapterEnter: [],
+            onChapterEnter: [
+                {
+                    layer: 'london-perimeter',
+                    opacity: 0,
+                    duration: 2500
+                }
+            ],
             onChapterExit: []
         },
 
