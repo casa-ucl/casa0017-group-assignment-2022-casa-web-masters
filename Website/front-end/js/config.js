@@ -1,5 +1,5 @@
 var config = {
-    style: 'mapbox://styles/heyhaiden/cl9obhcq600mg15l381brmm4n',
+    style: 'mapbox://styles/heyhaiden/cl9o9prbp000g14o8unsvc3sa', 
     accessToken: 'pk.eyJ1IjoiaGV5aGFpZGVuIiwiYSI6ImNsOWd5d2kzYTJjNm0zd3F0Y3JpYjBzbHkifQ.n54i9juDJo3yjB5iFuHohA',
     showMarkers: false,
     projection: 'mercator',
@@ -39,10 +39,10 @@ var config = {
                 // }
             ],
             onChapterExit: [
-                // {
-                //     layer: 'layer-name',
-                //     opacity: 0
-                // }
+                 {
+                     layer: 'los-angeles-county-heatmap',
+                     opacity: 0
+                 }
             ]
         },
         
@@ -64,11 +64,11 @@ var config = {
             //rotateAnimation: false,
             //callback: '',
             onChapterEnter: [
-                // {
-                //     layer: 'layer-name',
-                //     opacity: 1,
-                //     duration: 5000
-                // }
+                 {
+                     layer: 'los-angeles-county-heatmap',
+                     opacity: 1,
+                     duration: 5000
+                 }
             ],
             onChapterExit: [
                 // {
