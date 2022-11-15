@@ -65,7 +65,7 @@ body {
     appearance: none;
     width: 25px;
     height: 25px;
-    background: #04AA6D;
+    background: #343A40;
     cursor: pointer;
   }
   
@@ -75,3 +75,47 @@ body {
     background: #04AA6D;
     cursor: pointer;
   }
+
+  .stats {
+    width: 550px;
+    height: 40px;
+    background-color: #343A40;
+    position: absolute;
+}
+
+.statsText {
+    padding: 10px;
+    color: white;
+}
+
+.mapOverlay {
+    position: absolute;
+    background-color: red;
+    z-index: 10;
+}
+
+#map-overlay-London {
+    position: absolute;
+    width: 570px;
+    top: 0;
+    left: 0;
+    padding-left: 20px
+    }
+     
+#map-overlay-inner-London {
+    background-color: #00000010;
+    padding: 250px;
+    }
+
+#map-overlay-LA {
+    position: absolute;
+    width: 565px;
+    top: 0;
+    left: 0;
+    padding-left: 15px
+    }
+         
+#map-overlay-inner-LA {
+    background-color: #00000010;
+    padding: 250px;
+    }
