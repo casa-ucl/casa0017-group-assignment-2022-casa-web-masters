@@ -320,9 +320,9 @@ var config = {
             id: 'conclusion-visible',
             alignment: 'center',
             hidden: false,
-            title: 'Explore the Dashboard',
+            title: 'Want to explore more?',
             image: '',
-            description: 'We belive that changing the way we display the the story of pm 2.5 will create a change in Londoners preciptions and lead to change policy.',
+            description: 'Visit the dashboard <a href="dashboard.html" target="_blank">here</a>.',
             location: {
                 center: [-44.30249, 40.09260],
                 zoom: 2.48,
