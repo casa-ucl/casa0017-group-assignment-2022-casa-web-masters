@@ -19,7 +19,7 @@ var config = {
             hidden: false,
             title: 'How quickly does air quality improve when the world shuts down?',
             image: '',
-            description: 'The aim of our website is to investigate whether there is any visual or statistical correlation between changes in AQI measurements between London and Los Angeles leading up to and during the beginning of the Coronavirus pandemic in March of 2020. Due to lockdown measures, would a car-centric city have seen a more drastic improvement in its air quality than a non-car-centric city? In order to test this, two cities were chosen that have similarities among total population, population density, and total square footage.',
+            description: ' The aim of our website is to investigate whether there is any visual or statistical correlation between changes in AQI measurements between London and Los Angeles leading up to and during the beginning of the Coronavirus pandemic in March of 2020. Due to lockdown measures, >>>>>>>>>>>> would a car-centric city have seen a more drastic improvement in its air quality than a non-car-centric city? >>>>>> In order to test this, two cities were chosen that have similarities among total Car owners , But diffrent population density, and total population >>>>>>>>> . About why we are creating the web side - is that for policy makers, and companies that want to create a thier local standart of air quality. With our AQI index our consumers are more aware to the health causes of PM 2.5 and can act to make a local change for there citizens and employers health.',
             location: {
                 center: [-100.08256, 39.07762],
                 zoom: 4.5,
@@ -203,7 +203,7 @@ var config = {
             hidden: false,
             title: 'London, United Kingdom',
             image: '',
-            description: 'Copy these sections to add to your story.',
+            description: '“In October 2017 London was the first world megacity to sign up to the World Health Organization’s (WHO) “Breathe Life” campaign. The campaign asks cities to commit to meeting the WHO recommended guideline limit for PM2.5 by 2030. This pledge was subsequently adopted in the statutory London Environment Strategy1 published in May 2018” (from the Doc PM2.5 in London: Roadmap to meeting world health organisation guidelines by 2030) (oct 2019).',
             location: {
                 center: [-0.01805, 51.53370],
                 zoom: 10.49,
