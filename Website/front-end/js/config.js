@@ -103,7 +103,7 @@ var config = {
             hidden: false,
             title: 'Los Angeles County, California',
             image: './img/losangeles_chapter1.webp',
-            description: '<br>"Los Angeles is a city notorious for its smog, a combination of particle and ozone pollution. The prevalence of these pollutants result from many factors, including the burning of fossil fuels, especially by vehicles, ships, planes and manufacturing, as well as wildfires.<br><br>The large population of 4 million in Los Angeles, with another 6 million in the surrounding Los Angeles county, contributes significantly to the its ‘nonattainment’ air quality status because of heavy vehicular emissions and traffic congestion. It is estimated that there are 6.5 million vehicles in the city of Los Angeles alone." <br><br>Source: <a href="https://www.iqair.com/usa/california/los-angeles" target="_blank">www.iqair.com/usa/california/los-angeles</a>',
+            description: '<br>"Los Angeles is a city notorious for its smog, a combination of particle and ozone pollution. The prevalence of these pollutants result from many factors, including the burning of fossil fuels, especially by vehicles, ships, planes and manufacturing, as well as wildfires.<br><br>The large population of 4 million in Los Angeles, with another 6 million in the surrounding Los Angeles county, contributes significantly to the its ‘nonattainment’ air quality status because of heavy vehicular emissions and traffic congestion. It is estimated that there are 6.5 million vehicles in the city of Los Angeles alone." <br><br>Source: <a href="https://www.iqair.com/usa/california/los-angeles" target="_blank">www.iqair.com/usa/california/los-angeles</a><br>Photo: Shutterstock',
             
             location: {
                 center: [-118.32560, 33.90192],
@@ -161,8 +161,8 @@ var config = {
             alignment: 'left',
             hidden: false,
             title: 'Los Angeles County, California',
-            //image: '/assets/losangeles_chapter1.webp',
-            description: 'Something about cleanest air',
+            image: './img/empty-streets.webp',
+            description: '<br>"Data collected by EPA governmental monitors and analyzed in the <a href="https://www.iqair.com/blog/air-quality/report-impact-of-covid-19-on-global-air-quality-earth-day" target="_blank">COVID-19 Air Quality Report</a> found that Los Angeles experienced a long stretch of WHO-target air quality (< 10 μg/m3) from March 7-28, 2020, its longest streak since at least 1995. <br><br>This 18-day stretch of exceptionally clean air is likely the result of lockdown measures put in place to reduce the spread of the COVID-19 pandemic, during which non-essential businesses were ordered to close and residents were urged to stay at home. March 2020 became Los Angeles’s cleanest air quality month on record, averaging PM2.5 levels of 5.6 μg/m3."<br><br>Source: <a href="https://www.iqair.com/usa/california/los-angeles" target="_blank">www.iqair.com/usa/california/los-angeles</a><br>Photo: <a href="https://www.theguardian.com/world/2020/mar/28/los-angeles-deserted-coronavirus-outbreak-california" target="_blank">The Guardian</a>',
             location: {
                 center: [-118.32560, 33.90192],
                 zoom: 10.35,
