@@ -1,5 +1,5 @@
 var config = {
-    style: 'mapbox://styles/heyhaiden/cl9obhcq600mg15l381brmm4n',
+    style: 'mapbox://styles/heyhaiden/cl9o9prbp000g14o8unsvc3sa', 
     accessToken: 'pk.eyJ1IjoiaGV5aGFpZGVuIiwiYSI6ImNsOWd5d2kzYTJjNm0zd3F0Y3JpYjBzbHkifQ.n54i9juDJo3yjB5iFuHohA',
     showMarkers: false,
     projection: 'mercator',
@@ -11,15 +11,15 @@ var config = {
     title: '   ',
     subtitle: 'Visualizing the effects of lockdown policy on PM₂.₅ air quality measurements',
     byline: 'Los Angeles and London, January - June 2020',
-    footer: 'Source: source citations, etc. <br> Created using <a href="https://github.com/mapbox/storytelling" target="_blank">Mapbox Storytelling</a> template.',
+    //footer: 'Source: source citations, etc. <br> Created using <a href="https://github.com/mapbox/storytelling" target="_blank">Mapbox Storytelling</a> template.',
     chapters: [
         {
             id: 'research-intro',
             alignment: 'center',
             hidden: false,
-            title: 'Research Question Here',
+            title: 'How quickly does air quality improve when the world shuts down?',
             image: '',
-            description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
+            description: 'The aim of our website is to investigate whether there is any visual or statistical correlation between changes in AQI measurements between London and Los Angeles leading up to and during the beginning of the Coronavirus pandemic in March of 2020. Due to lockdown measures, would a car-centric city have seen a more drastic improvement in its air quality than a non-car-centric city? In order to test this, two cities were chosen that have similarities among total population, population density, and total square footage.',
             location: {
                 center: [-100.08256, 39.07762],
                 zoom: 4.5,
@@ -39,10 +39,10 @@ var config = {
                 // }
             ],
             onChapterExit: [
-                // {
-                //     layer: 'layer-name',
-                //     opacity: 0
-                // }
+                 {
+                     layer: 'los-angeles-county-heatmap',
+                     opacity: 0
+                 }
             ]
         },
         
@@ -52,7 +52,7 @@ var config = {
             hidden: false,
             title: 'Los Angeles County, California',
             image: '/img/losangeles_chapter1.webp',
-            description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
+            description: 'Population - 3.9 Million, Density - 8,304/sq, Car owners- 2,276,974  The lockdown starts: 19th March 2020 ',
             location: {
                 center: [-118.32409, 34.03083],
                 zoom: 7.5,
@@ -64,17 +64,17 @@ var config = {
             //rotateAnimation: false,
             //callback: '',
             onChapterEnter: [
-                // {
-                //     layer: 'layer-name',
-                //     opacity: 1,
-                //     duration: 5000
-                // }
+                 {
+                     layer: 'los-angeles-perimeter',
+                     opacity: 1,
+                     duration: 5000
+                 }
             ],
             onChapterExit: [
-                // {
-                //     layer: 'layer-name',
-                //     opacity: 0
-                // }
+                 {
+                     layer: 'los-angeles-perimeter',
+                     opacity: 0
+                 }
             ]
         },
 
