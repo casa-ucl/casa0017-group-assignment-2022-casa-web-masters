@@ -190,6 +190,31 @@ var config = {
         {
             id: 'london-intro-1',
             alignment: 'right',
+            hidden: true,
+            title: 'London, United Kingdom',
+            image: './img/london_chapter1.webp',
+            description: 'Population - 9 Million, Density - 14,500/sq, Car owners- 2.6 Million  The lockdown starts: 26th March 2020',
+            location: {
+                center: [-0.10249, 51.47460],
+                zoom: 10.11,
+                pitch: 45.00,
+                // flyTo additional controls-
+                // These options control the flight curve, making it move
+                // slowly and zoom out almost completely before starting
+                // to pan.
+                speed: 2, // make the flying slow
+                curve: 1, // change the speed at which it zooms out
+            },
+            mapAnimation: 'flyTo',
+            rotateAnimation: false,
+            callback: '',
+            onChapterEnter: [],
+            onChapterExit: []
+        },
+
+        {
+            id: 'london-intro-1',
+            alignment: 'right',
             hidden: false,
             title: 'London, United Kingdom',
             image: './img/london_chapter1.webp',
@@ -221,7 +246,7 @@ var config = {
             description: '“In October 2017 London was the first world megacity to sign up to the World Health Organization’s (WHO) “Breathe Life” campaign. The campaign asks cities to commit to meeting the WHO recommended guideline limit for PM2.5 by 2030. This pledge was subsequently adopted in the statutory London Environment Strategy1 published in May 2018” (from the Doc PM2.5 in London----Roadmap to meeting world health organisation guidelines by 2030) (oct 2019).',
             location: {
                 center: [-0.12707, 51.51506],
-                zoom: 14.01,
+                zoom: 13.01,
                 pitch: 57.50,
                 bearing: 0.00
             },
@@ -240,9 +265,9 @@ var config = {
             image: '',
             description: 'Copy these sections to add to your story.',
             location: {
-                center: [-0.01805, 51.53370],
-                zoom: 10.49,
-                pitch: 45.00,
+                center: [-0.12707, 51.51506],
+                zoom: 13.01,
+                pitch: 57.50,
                 bearing: 0.00
             },
             mapAnimation: 'flyTo',
@@ -260,9 +285,9 @@ var config = {
             image: '',
             description: 'We belive that changing the way we display the the story of pm 2.5 will create a change in Londoners preciptions and lead to change policy .',
             location: {
-                center: [-0.01805, 51.53370],
-                zoom: 10.49,
-                pitch: 45.00,
+                center: [-0.12707, 51.51506],
+                zoom: 13.01,
+                pitch: 57.50,
                 bearing: 0.00
             },
             mapAnimation: 'flyTo',
@@ -273,12 +298,31 @@ var config = {
         },
 
         {
-            id: 'conclusion',
+            id: 'conclusion-hidden',
             alignment: 'center',
-            hidden: false,
-            title: 'London, United Kingdom',
+            hidden: true,
+            title: 'Explore the Dashboard',
             image: '',
             description: 'We belive that changing the way we display the the story of pm 2.5 will create a change in Londoners preciptions and lead to change policy .',
+            location: {
+                center: [-44.30249, 40.09260],
+                zoom: 2.48,
+                pitch: 23.50,
+            },
+            mapAnimation: 'flyTo',
+            rotateAnimation: false,
+            callback: '',
+            onChapterEnter: [],
+            onChapterExit: []
+        },
+
+        {
+            id: 'conclusion-visible',
+            alignment: 'center',
+            hidden: false,
+            title: 'Explore the Dashboard',
+            image: '',
+            description: 'We belive that changing the way we display the the story of pm 2.5 will create a change in Londoners preciptions and lead to change policy.',
             location: {
                 center: [-44.30249, 40.09260],
                 zoom: 2.48,
