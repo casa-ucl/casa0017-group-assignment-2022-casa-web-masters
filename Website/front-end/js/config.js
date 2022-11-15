@@ -33,16 +33,17 @@ var config = {
             //callback: '',
             onChapterEnter: [
                  {
-                     //layer: 'los-angeles-county-heatmap',
-                     //opacity: 0,
-                     //duration: 5000
+                     layer: 'mapbox-satellite',
+                     opacity: 1,
+                     duration: 500,
+                     layer: 'los-angeles-county-heatmap',
+                     opacity: 0,
                      
                  }
             ],
             onChapterExit: [
                  {
-                     layer: 'los-angeles-county-heatmap',
-                     opacity: 0.5
+                    
                  }
             ]
         },
@@ -66,15 +67,12 @@ var config = {
             //callback: '',
             onChapterEnter: [
                  {
-                     layer: 'los-angeles-perimeter',
-                     opacity: 1,
-                     duration: 2000
+                     
                  }
             ],
             onChapterExit: [
                  {
-                     layer: 'los-angeles-perimeter',
-                     opacity: 2000
+                     
                  }
             ]
         },
@@ -97,15 +95,12 @@ var config = {
             callback: '',
             onChapterEnter: [
                  {
-                     layer: 'layer-name',
-                     opacity: 1,
-                     duration: 5000
+                    
                  }
             ],
             onChapterExit: [
                  {
-                     layer: 'layer-name',
-                     opacity: 0
+                     
                  }
             ]
         },
