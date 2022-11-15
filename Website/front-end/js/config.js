@@ -32,11 +32,13 @@ var config = {
             rotateAnimation: false,
             //callback: '',
             onChapterEnter: [
-                // {
-                //     layer: 'layer-name',
-                //     opacity: 1,
-                //     duration: 5000
-                // }
+                 {
+                     layer: 'los-angeles-county-heatmap',
+                     opacity: 0,
+                     //duration: 5000
+                     layer: 'london-heatmap',
+                     opacity: 0
+                 }
             ],
             onChapterExit: [
                  {
