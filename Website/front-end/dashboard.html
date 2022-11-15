@@ -64,7 +64,7 @@
       </div>
     </div>
     <!-- row containing maps -->
-    <div class="row" style="padding: 0px 0px 25px 0px">
+    <div class="row" style="padding: 0px 0px 70px 0px">
 
       <script src="https://d3js.org/d3.v3.min.js" charset="utf-8"></script>
 
@@ -72,6 +72,10 @@
       <!-- map of LA -->
       <div class="col-6" style="padding-right: 20px" position="start">
         <div id='map1' style='width: 100%; height: 500px;'></div>
+        <div id="map-overlay-LA">
+          <div id="map-overlay-inner-LA"></div>
+        </div>
+
         <script>
           mapboxgl.accessToken = 'pk.eyJ1IjoiaGV5aGFpZGVuIiwiYSI6ImNsOWd5d2kzYTJjNm0zd3F0Y3JpYjBzbHkifQ.n54i9juDJo3yjB5iFuHohA';
           const map1 = new mapboxgl.Map({
@@ -84,11 +88,23 @@
             map.setFog({}); // Set the default atmosphere style
           });
         </script>
+        <div id="statsLA" class="stats">
+          <div class="statsText">
+            <p style="float: left; padding-left: 10px;">Air Quality Measurements in PPM</p>
+            <p style="float: left; padding-left: 20px;">Min: <span id="minLaVal"></span></p>
+            <p style="float: left; padding-left: 20px;">Median: <span id="medLaVal"></span></p>
+            <p style="float: left; padding-left: 20px;">Max: <span id="maxLaVal"></span></p>
+          </div>
+        </div>
       </div>
 
       <!-- map of London -->
       <div class="col-6" style="padding-left: 20px">
         <div id='map2' style='width: 100%; height: 500px;'></div>
+        <div id="map-overlay-London">
+          <div id="map-overlay-inner-London"></div>
+        </div>
+
         <script>
           mapboxgl.accessToken = 'pk.eyJ1IjoiaGV5aGFpZGVuIiwiYSI6ImNsOWd5d2kzYTJjNm0zd3F0Y3JpYjBzbHkifQ.n54i9juDJo3yjB5iFuHohA';
           const map2 = new mapboxgl.Map({
@@ -101,6 +117,14 @@
             map.setFog({}); // Set the default atmosphere style
           });
         </script>
+        <div id="statsLondon" class="stats">
+          <div class="statsText" style="padding: 10px">
+            <p style="float: left; padding-left: 10px;">Air Quality Measurements in PPM</p>
+            <p style="float: left; padding-left: 20px;">Min: <span id="minLondonVal"></span></p>
+            <p style="float: left; padding-left: 20px">Median: <span id="medLondonVal"></span></p>
+            <p style="float: left; padding-left: 20px;">Max: <span id="maxLondonVal"></span></p>
+          </div>
+        </div>
       </div>
     </div>
 
@@ -117,40 +141,115 @@
           <p style="float: left">Date: <span id="dateValue"></span></p>
           <p style="float: right">Air Quality Index Measurements in Parts Per Million (PPM)</p>
         </div>
+        <!--code for slider and for heatmapping-->
         <script>
-          //empty array to hold Dates from json objects in file
+        
+        // color scale object, const because it will not change, will help to determine map colour based on median ppm
+        const colorScale = {
+          Good: "#2CBA0030",
+          Moderate: "#A3FF0030",
+          UnhealthySensitiveGroups: "#FFF40030",
+          Unhealthy: "#FFA70030",
+          VeryUnhealthy: "#FF000030",
+        }
+
+          //empty arrays to hold values from json objects in file
           let dates = [];
-          //empty array to hold Counts from json objects in file
-          let ppmCounts = [];
+          let minsLondon = [];
+          let maxsLondon = [];
+          let medsLondon = [];
+
+          let minsLA = [];
+          let maxsLA = [];
+          let medsLA = [];
+
+          //get json file, allocate data to dataLA
+          $.getJSON("../back-end/resources/dataLA.json", function(dataLA) {
+            //for each object in dataLA
+            $.each(dataLA, function (k, v) {
+              // create variables, set it to the value of corrseponding keys
+              let min = v.min;
+              let med = v.median;
+              let max = v.max;
+
+              //push date value onto arrays
+              minsLA.push(min);
+              medsLA.push(med);
+              maxsLA.push(max);
+              //this array now contains all the dates from the json file
+            });
+          })
 
           //get json file, allocate data to dataLondon
           $.getJSON("../back-end/resources/dataLondon.json", function (dataLondon) {
             //for each object in dataLondon
             $.each(dataLondon, function (k, v) {
-              // create variable date, set it to the value of each Date key
+              // create variables, set it to the value of corrseponding keys
               let date = v.Date;
+              let min = v.min;
+              let med = v.median;
+              let max = v.max;
 
-              //push date value onto dates array
+              //push date value onto arrays
               dates.push(date);
-              //this array now contains all the dates from the json file
+              minsLondon.push(min);
+              medsLondon.push(med);
+              maxsLondon.push(max);
             });
             //create variable for slider, allocate to myRange id on page
             let slider = document.getElementById("myRange");
-            //create variable for dateText, allocate to dateValue id - this will display the date
+            //create variables for other text so it can be accessed with js
             let dateText = document.getElementById("dateValue");
+            let minLondonText = document.getElementById("minLondonVal");
+            let medLondonText = document.getElementById("medLondonVal");
+            let maxLondonText = document.getElementById("maxLondonVal");
+            let minLaText = document.getElementById("minLaVal");
+            let medLaText = document.getElementById("medLaVal");
+            let maxLaText = document.getElementById("maxLaVal");
+            let londonColor = document.getElementById("map-overlay-inner-London")
+            let laColor = document.getElementById("map-overlay-inner-LA")
             //change dateText(or dataValue) to the slider value on page load
             dateText.innerHTML = dates[slider.value];
+            // do the same with other values
+            minLondonText.innerHTML = minsLondon[slider.value];
+            medLondonText.innerHTML = medsLondon[slider.value];
+            maxLondonText.innerHTML = maxsLondon[slider.value];
+            minLaText.innerHTML = minsLA[slider.value];
+            medLaText.innerHTML = medsLA[slider.value];
+            maxLaText.innerHTML = maxsLA[slider.value];
+            // change the colour using getColor function and the median value at slider index from page load
+            londonColor.style.backgroundColor = getColor(medsLondon[slider.value]);
+            laColor.style.backgroundColor = getColor(medsLA[slider.value]);
             //change dateText(or dateValue) to the slider value on slider input
             slider.oninput = function () {
               dateText.innerHTML = dates[this.value];
+              // do the same with other values
+              minLondonText.innerHTML = minsLondon[this.value];
+              medLondonText.innerHTML = medsLondon[this.value];
+              maxLondonText.innerHTML = maxsLondon[this.value];
+              minLaText.innerHTML = minsLA[this.value];
+              medLaText.innerHTML = medsLA[this.value];
+              maxLaText.innerHTML = maxsLA[this.value];
+              // change the colour using getColor function and the median value at slider index from input
+              londonColor.style.backgroundColor = getColor(medsLondon[this.value]);
+              laColor.style.backgroundColor = getColor(medsLA[this.value]);
             }
-
-            //TODO
-            //add layer to maps that uses value from count key in json
-            //layer should initialize with slider.value
-            //layer should update with this.value
-            //Date and Count displayed should come from same object
-            //reference timeline slider mapbox example and flickr photo class example
+            
+            // this function outputs a hex value (from the colorScales object) based on an integer input (in this case, the median value at slider index)
+            function getColor(ppm) {
+              if (ppm <= 12) {
+                  rating = colorScale.Good;
+              } else if (12 < ppm && ppm <= 36 ) {
+                  rating = colorScale.Moderate;
+              } else if (36 < ppm && ppm <= 55) {
+                  rating = colorScale.UnhealthySensitiveGroups;
+              } else if (55 < ppm && ppm <= 150) {
+                  rating = colorScale.Unhealthy;
+              } else if (150 < ppm) {
+                  rating = colorScale.VeryUnhealthy;
+              }
+              return rating
+            }
 
             //use this to log information for debugging
             console.log(dates[195]);
