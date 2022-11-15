@@ -19,7 +19,7 @@ var config = {
             hidden: false,
             title: 'How quickly does air quality improve when the world shuts down?',
             image: '',
-            description: ' The aim of our website is to investigate whether there is any visual or statistical correlation between changes in AQI measurements between London and Los Angeles leading up to and during the beginning of the Coronavirus pandemic in March of 2020. Due to lockdown measures, >>>>>>>>>>>> would a car-centric city have seen a more drastic improvement in its air quality than a non-car-centric city? >>>>>> In order to test this, two cities were chosen that have similarities among total Car owners , But diffrent population density, and total population >>>>>>>>> . About why we are creating the web side - is that for policy makers, and companies that want to create a thier local standart of air quality. With our AQI index our consumers are more aware to the health causes of PM 2.5 and can act to make a local change for there citizens and employers health.',
+            description: ' The aim of our website is to investigate whether there is any visual or statistical correlation between changes in AQI measurements between London and Los Angeles leading up to and during the beginning of the Coronavirus pandemic in March of 2020. Due to lockdown measures, >>>>> . When it comes to tackling air pollution and the climate emergency I’m clear that cities like London and Los Angeles have a responsibility to act" (he Mayor of London and Chair of C40 Cities, Sadiq Khan,)>>>>>>>>>>>> would a car-centric city have seen a more drastic improvement in its air quality than a non-car-centric city? >>>>>> In order to test this, two cities were chosen that have similarities among total Car owners , But diffrent population density, and total population >>>>>>>>> . About why we are creating the web side - is that for policy makers, and companies that want to create a thier local standart of air quality. With our AQI index our consumers are more aware to the health causes of PM 2.5 and can act to make a local change for there citizens and employers health.',
             location: {
                 center: [-100.08256, 39.07762],
                 zoom: 4.5,
@@ -116,7 +116,7 @@ var config = {
             hidden: true,
             title: 'Los Angeles, California',
             //image: '/img/losangeles_chapter1.webp',
-            description: 'rrrrrr',
+            description: 'We belive that changing the way we display the the story of pm 2.5 will create a change in Angeleno perception and lead to change policy',
             location: {
                 center: [-118.32560, 33.90192],
                 zoom: 10.35,
@@ -243,7 +243,7 @@ var config = {
             hidden: false,
             title: 'London, United Kingdom',
             image: '',
-            description: 'We belive that changing the way we display the the story of pm 2.5 will create a change in Londoners preciptions and lead to change policy .',
+            description: 'We belive that changing the way we display the the story of pm 2.5 will create a change in Londoners perception and lead to change policy .',
             location: {
                 center: [-0.01805, 51.53370],
                 zoom: 10.49,
