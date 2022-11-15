@@ -33,17 +33,16 @@ var config = {
             //callback: '',
             onChapterEnter: [
                  {
-                     layer: 'los-angeles-county-heatmap',
-                     opacity: 0,
+                     //layer: 'los-angeles-county-heatmap',
+                     //opacity: 0,
                      //duration: 5000
-                     layer: 'london-heatmap',
-                     opacity: 0
+                     
                  }
             ],
             onChapterExit: [
                  {
                      layer: 'los-angeles-county-heatmap',
-                     opacity: 0
+                     opacity: 0.5
                  }
             ]
         },
@@ -52,8 +51,8 @@ var config = {
             id: 'la-intro',
             alignment: 'left',
             hidden: false,
-            title: 'Los Angeles County, California',
-            image: '/img/losangeles_chapter1.webp',
+            title: 'Los Angeles, California',
+            //image: '/img/losangeles_chapter1.webp',
             description: 'Population - 3.9 Million, Density - 8,304/sq, Car owners- 2,276,974  The lockdown starts: 19th March 2020',
             location: {
                 center: [-118.32409, 34.03083],
@@ -69,13 +68,13 @@ var config = {
                  {
                      layer: 'los-angeles-perimeter',
                      opacity: 1,
-                     duration: 5000
+                     duration: 2000
                  }
             ],
             onChapterExit: [
                  {
                      layer: 'los-angeles-perimeter',
-                     opacity: 0
+                     opacity: 2000
                  }
             ]
         },
@@ -97,17 +96,17 @@ var config = {
             rotateAnimation: false,
             callback: '',
             onChapterEnter: [
-                // {
-                //     layer: 'layer-name',
-                //     opacity: 1,
-                //     duration: 5000
-                // }
+                 {
+                     layer: 'layer-name',
+                     opacity: 1,
+                     duration: 5000
+                 }
             ],
             onChapterExit: [
-                // {
-                //     layer: 'layer-name',
-                //     opacity: 0
-                // }
+                 {
+                     layer: 'layer-name',
+                     opacity: 0
+                 }
             ]
         },
 
@@ -115,7 +114,7 @@ var config = {
             id: 'la-intro-3',
             alignment: 'left',
             hidden: true,
-            title: 'Los Angeles County, California',
+            title: 'Los Angeles, California',
             //image: '/img/losangeles_chapter1.webp',
             description: 'rrrrrr',
             location: {
@@ -128,17 +127,17 @@ var config = {
             rotateAnimation: false,
             callback: '',
             onChapterEnter: [
-                // {
-                //     layer: 'layer-name',
-                //     opacity: 1,
-                //     duration: 5000
-                // }
+                 {
+                     layer: 'layer-name',
+                     opacity: 1,
+                     duration: 5000
+                 }
             ],
             onChapterExit: [
-                // {
-                //     layer: 'layer-name',
-                //     opacity: 0
-                // }
+                 {
+                     layer: 'layer-name',
+                     opacity: 0
+                 }
             ]
         },
 
@@ -146,7 +145,7 @@ var config = {
             id: 'la-intro-4',
             alignment: 'left',
             hidden: true,
-            title: 'Los Angeles County, California',
+            title: 'Los Angeles, California',
             //image: '/assets/losangeles_chapter1.webp',
             description: 'sss',
             location: {
@@ -159,17 +158,17 @@ var config = {
             rotateAnimation: false,
             callback: '',
             onChapterEnter: [
-                // {
-                //     layer: 'layer-name',
-                //     opacity: 1,
-                //     duration: 5000
-                // }
+                 {
+                     layer: 'layer-name',
+                     opacity: 1,
+                     duration: 5000
+                 }
             ],
             onChapterExit: [
-                // {
-                //     layer: 'layer-name',
-                //     opacity: 0
-                // }
+                 {
+                     layer: 'layer-name',
+                     opacity: 0
+                 }
             ]
         },
 
