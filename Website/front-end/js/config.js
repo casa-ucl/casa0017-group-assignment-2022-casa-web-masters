@@ -217,7 +217,7 @@ var config = {
                 {
                     layer: 'london-perimeter',
                     opacity: 1,
-                    duration: 2500
+                    duration: 1500
                 }
             ]
         },
@@ -270,7 +270,7 @@ var config = {
             onChapterEnter: [
                 {
                     layer: 'london-perimeter',
-                    opacity: 0.5,
+                    opacity: 0.3,
                     duration: 2500
                 }
             ],
