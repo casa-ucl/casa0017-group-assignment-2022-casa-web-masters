@@ -46,6 +46,8 @@ a:visited {
   width: 100%;
   position: relative;
   z-index: 5;
+  background-color: red;
+  opacity: 80%;
 }
 
 #header h1,
