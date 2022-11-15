@@ -1,5 +1,5 @@
 var config = {
-    style: 'mapbox://styles/heyhaiden/cl9o9prbp000g14o8unsvc3sa', 
+    style: 'mapbox://styles/heyhaiden/cl9o9prbp000g14o8unsvc3sa',
     accessToken: 'pk.eyJ1IjoiaGV5aGFpZGVuIiwiYSI6ImNsOWd5d2kzYTJjNm0zd3F0Y3JpYjBzbHkifQ.n54i9juDJo3yjB5iFuHohA',
     showMarkers: false,
     projection: 'mercator',
@@ -34,7 +34,7 @@ var config = {
             onChapterEnter: [],
             onChapterExit: []
         },
-        
+
         {
             id: 'research-intro',
             alignment: 'center',
@@ -54,18 +54,18 @@ var config = {
             rotateAnimation: false,
             //callback: '',
             onChapterEnter: [
-                 {
-                     
-                     
-                 }
+                {
+
+
+                }
             ],
             onChapterExit: [
-                 {
-                    
-                 }
+                {
+
+                }
             ]
         },
-        
+
         {
             id: 'la-hidden',
             alignment: 'left',
@@ -84,16 +84,16 @@ var config = {
             //rotateAnimation: false,
             //callback: '',
             onChapterEnter: [
-                 {
-                     
-                 }
+                {
+
+                }
             ],
             onChapterExit: [
-                 {
+                {
                     layer: 'london-perimeter',
                     opacity: 1,
-                    duration: 3000  
-                 }
+                    duration: 3000
+                }
             ]
         },
 
@@ -102,7 +102,35 @@ var config = {
             alignment: 'left',
             hidden: false,
             title: 'Los Angeles County, California',
-            image: '/img/losangeles_chapter1.webp',
+            image: './img/losangeles_chapter1.webp',
+            description: '',
+            location: {
+                center: [-118.32560, 33.90192],
+                zoom: 10.35,
+                pitch: 45.00,
+                bearing: 0.00
+            },
+            mapAnimation: 'flyTo',
+            rotateAnimation: false,
+            callback: '',
+            onChapterEnter: [
+                {
+
+                }
+            ],
+            onChapterExit: [
+                {
+
+                }
+            ]
+        },
+
+        {
+            id: 'la-intro-3',
+            alignment: 'left',
+            hidden: true,
+            title: 'Los Angeles, California',
+            //image: '/img/losangeles_chapter1.webp',
             description: 'Population - 3.9 Million, Density - 8,304/sq, Car owners- 2,276,974  The lockdown starts: 19th March 2020',
             location: {
                 center: [-118.32560, 33.90192],
@@ -114,52 +142,24 @@ var config = {
             rotateAnimation: false,
             callback: '',
             onChapterEnter: [
-                 {
-                    
-                 }
+                {
+                    layer: 'layer-name',
+                    opacity: 1,
+                    duration: 5000
+                }
             ],
             onChapterExit: [
-                 {
-                     
-                 }
-            ]
-        },
-
-        {
-            id: 'la-intro-3',
-            alignment: 'left',
-            hidden: true,
-            title: 'Los Angeles, California',
-            //image: '/img/losangeles_chapter1.webp',
-            description: 'rrrrrr',
-            location: {
-                center: [-118.32560, 33.90192],
-                zoom: 10.35,
-                pitch: 45.00,
-                bearing: 0.00
-            },
-            mapAnimation: 'flyTo',
-            rotateAnimation: false,
-            callback: '',
-            onChapterEnter: [
-                 {
-                     layer: 'layer-name',
-                     opacity: 1,
-                     duration: 5000
-                 }
-            ],
-            onChapterExit: [
-                 {
-                     layer: 'layer-name',
-                     opacity: 0
-                 }
+                {
+                    layer: 'layer-name',
+                    opacity: 0
+                }
             ]
         },
 
         {
             id: 'la-intro-4',
             alignment: 'left',
-            hidden: true,
+            hidden: false,
             title: 'Los Angeles, California',
             //image: '/assets/losangeles_chapter1.webp',
             description: 'sss',
@@ -173,17 +173,17 @@ var config = {
             rotateAnimation: false,
             callback: '',
             onChapterEnter: [
-                 {
-                     layer: 'layer-name',
-                     opacity: 1,
-                     duration: 5000
-                 }
+                {
+                    layer: 'layer-name',
+                    opacity: 1,
+                    duration: 5000
+                }
             ],
             onChapterExit: [
-                 {
-                     layer: 'layer-name',
-                     opacity: 0
-                 }
+                {
+                    layer: 'layer-name',
+                    opacity: 0
+                }
             ]
         },
 
@@ -192,7 +192,7 @@ var config = {
             alignment: 'right',
             hidden: false,
             title: 'London, United Kingdom',
-            image: '/assets/london_chapter1.webp',
+            image: './img/london_chapter1.webp',
             description: 'Population - 9 Million, Density - 14,500/sq, Car owners- 2.6 Million  The lockdown starts: 26th March 2020',
             location: {
                 center: [-0.01805, 51.53370],
@@ -220,9 +220,9 @@ var config = {
             image: '',
             description: '“In October 2017 London was the first world megacity to sign up to the World Health Organization’s (WHO) “Breathe Life” campaign. The campaign asks cities to commit to meeting the WHO recommended guideline limit for PM2.5 by 2030. This pledge was subsequently adopted in the statutory London Environment Strategy1 published in May 2018” (from the Doc PM2.5 in London----Roadmap to meeting world health organisation guidelines by 2030) (oct 2019).',
             location: {
-                center: [-0.01805, 51.53370],
-                zoom: 10.49,
-                pitch: 45.00,
+                center: [-0.12707, 51.51506],
+                zoom: 14.01,
+                pitch: 57.50,
                 bearing: 0.00
             },
             mapAnimation: 'flyTo',
@@ -270,7 +270,26 @@ var config = {
             callback: '',
             onChapterEnter: [],
             onChapterExit: []
+        },
+
+        {
+            id: 'conclusion',
+            alignment: 'center',
+            hidden: false,
+            title: 'London, United Kingdom',
+            image: '',
+            description: 'We belive that changing the way we display the the story of pm 2.5 will create a change in Londoners preciptions and lead to change policy .',
+            location: {
+                center: [-44.30249, 40.09260],
+                zoom: 2.48,
+                pitch: 23.50,
+            },
+            mapAnimation: 'flyTo',
+            rotateAnimation: false,
+            callback: '',
+            onChapterEnter: [],
+            onChapterExit: []
         }
-        
+
     ]
 };
