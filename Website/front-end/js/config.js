@@ -198,7 +198,7 @@ var config = {
             hidden: false,
             title: 'London, United Kingdom',
             image: '',
-            description: '“In October 2017 London was the first world megacity to sign up to the World Health Organization’s (WHO) “Breathe Life” campaign. The campaign asks cities to commit to meeting the WHO recommended guideline limit for PM2.5 by 2030. This pledge was subsequently adopted in the statutory London Environment Strategy1 published in May 2018” (from the Doc PM2.5 in London: Roadmap to meeting world health organisation guidelines by 2030) (oct 2019).',
+            description: '“In October 2017 London was the first world megacity to sign up to the World Health Organization’s (WHO) “Breathe Life” campaign. The campaign asks cities to commit to meeting the WHO recommended guideline limit for PM2.5 by 2030. This pledge was subsequently adopted in the statutory London Environment Strategy1 published in May 2018” (from the Doc PM2.5 in London----Roadmap to meeting world health organisation guidelines by 2030) (oct 2019).',
             location: {
                 center: [-0.01805, 51.53370],
                 zoom: 10.49,
@@ -238,7 +238,7 @@ var config = {
             hidden: false,
             title: 'London, United Kingdom',
             image: '',
-            description: 'Copy these sections to add to your story.',
+            description: 'We belive that changing the way we display the the story of pm 2.5 will create a change in Londoners preciptions and lead to change policy .',
             location: {
                 center: [-0.01805, 51.53370],
                 zoom: 10.49,
