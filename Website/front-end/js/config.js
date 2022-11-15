@@ -67,12 +67,12 @@ var config = {
         },
         
         {
-            id: 'la-intro',
+            id: 'la-hidden',
             alignment: 'left',
-            hidden: false,
+            hidden: true,
             title: 'Los Angeles, California',
             //image: '/img/losangeles_chapter1.webp',
-            description: 'Population - 3.9 Million, Density - 8,304/sq, Car owners- 2,276,974  The lockdown starts: 19th March 2020',
+            description: '',
             location: {
                 center: [-118.32409, 34.03083],
                 zoom: 7.5,
@@ -90,7 +90,9 @@ var config = {
             ],
             onChapterExit: [
                  {
-                     
+                    layer: 'london-perimeter',
+                    opacity: 1,
+                    duration: 3000  
                  }
             ]
         },
@@ -100,8 +102,8 @@ var config = {
             alignment: 'left',
             hidden: false,
             title: 'Los Angeles County, California',
-            //image: '/img/losangeles_chapter1.webp',
-            description: 'FFFFFF',
+            image: '/img/losangeles_chapter1.webp',
+            description: 'Population - 3.9 Million, Density - 8,304/sq, Car owners- 2,276,974  The lockdown starts: 19th March 2020',
             location: {
                 center: [-118.32560, 33.90192],
                 zoom: 10.35,
