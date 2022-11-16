@@ -68,37 +68,6 @@ var config = {
         },
 
         {
-            id: 'research-intro',
-            alignment: 'center',
-            hidden: false,
-            title: 'How quickly does air quality improve when the world shuts down?',
-            image: '',
-            description: 'In order to test this, two cities were chosen that have similarities in total population, population density, and total square footage, but major differences in transportation modalities. The car-centric city of Los Angeles ranks highly in car ownership with 2,276,974 registered vehicles in 2019 for a population of just under 3.9 million people during the same time frame. This represents a 58.3% rate of vehicle ownership (European Commission, 2021). A non-car-centric city, London, with 9 million, boasted a much smaller 49.1% rate of vehicle ownership inhabitants during the same timeframe (European Commission, 2021). This hypothesis was posed due to the perceived negative impact of private vehicles on PM25 measurements, which are composed of dissolved droplets of pollutants and other inhalants dangerous to human health (USC Environmental Health Centers , 2021).',
-            location: {
-                center: [-100.08256, 39.07762],
-                zoom: 4.5,
-                pitch: 13.53,
-                bearing: 0.00,
-                speed: 0.2,
-                curve: 2
-            },
-            mapAnimation: 'easeTo',
-            rotateAnimation: false,
-            //callback: '',
-            onChapterEnter: [
-                {
-
-
-                }
-            ],
-            onChapterExit: [
-                {
-
-                }
-            ]
-        },
-
-        {
             id: 'la-hidden',
             alignment: 'left',
             hidden: true,
