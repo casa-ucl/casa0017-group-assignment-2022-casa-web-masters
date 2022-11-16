@@ -279,13 +279,34 @@ var config = {
             ],
             onChapterExit: []
         },
+
+        {
+            id: 'london-intro-4',
+            alignment: 'right',
+            hidden: true,
+            title: 'London, United Kingdom',
+            image: '',
+            description: 'xxx',
+            location: {
+                center: [-0.12707, 51.51506],
+                zoom: 13.01,
+                pitch: 57.50,
+                bearing: 0.00
+            },
+            mapAnimation: 'flyTo',
+            rotateAnimation: false,
+            callback: '',
+            onChapterEnter: [],
+            onChapterExit: []
+        },
+
         {
             id: 'london-intro-2',
             alignment: 'right',
             hidden: false,
             title: 'London, United Kingdom',
             image: './img/LondonBarGraph.png',
-            description: '<br>"London experienced reductions in PM2.5 of 9% during their lockdown periods compared to 2019. Contributing factors are likely to include a significant reduction in traffic and power generation (xxx).<br><br> Comparing London’s PM2.5 levels during the 2020 lockdowns to the average of the prior 4 years doesn’t show such a clear downward trend as in comparison to last year alone. Weather conditions and geographical location can greatly influence measured air quality, even after emissions fall. More data quantifying the changing levels of PM2.5 as these cities’ lockdown periods continue will be beneficial to gain a more thorough comparison with previous years." <br><br>Source: <a href="https://cms.iqair.com/sites/default/files/documents/REPORT-COVID-19-Impact-on-Air-Quality-in-10-Major-Cities_V6.pdf" target="_blank">COVID-19 AIR QUALITY REPORT</a>,<br><a href="https://www.telegraph.co.uk/politics/0/lockdown-government-guidance-uk-coronavirus/" target="_blank">The Government 50-page roadmap out of lockdown, explained</a><br>Photo: IQ AIR',
+            description: '<br>"London experienced reductions in PM2.5 of 9% during their lockdown periods compared to 2019. Contributing factors are likely to include a significant reduction in traffic and power generation (<a href="https://www.telegraph.co.uk/politics/0/lockdown-government-guidance-uk-coronavirus/" target="_blank">The Government 50-page roadmap out of lockdown, explained</a>).<br><br> Comparing London’s PM2.5 levels during the 2020 lockdowns to the average of the prior 4 years doesn’t show such a clear downward trend as in comparison to last year alone. Weather conditions and geographical location can greatly influence measured air quality, even after emissions fall. More data quantifying the changing levels of PM2.5 as these cities’ lockdown periods continue will be beneficial to gain a more thorough comparison with previous years." <br><br>Source: <a href="https://cms.iqair.com/sites/default/files/documents/REPORT-COVID-19-Impact-on-Air-Quality-in-10-Major-Cities_V6.pdf" target="_blank">COVID-19 AIR QUALITY REPORT</a>,<br>Photo: IQ AIR',
             location: {
                 center: [-0.12707, 51.51506],
                 zoom: 13.01,
@@ -305,45 +326,8 @@ var config = {
             onChapterExit: []
         },
 
-        {
-            id: 'london-intro-3',
-            alignment: 'right',
-            hidden: true,
-            title: 'London, United Kingom',
-            image: '',
-            description: 'Copy these sections to add to your story.',
-            location: {
-                center: [-0.12707, 51.51506],
-                zoom: 13.01,
-                pitch: 57.50,
-                bearing: 0.00
-            },
-            mapAnimation: 'flyTo',
-            rotateAnimation: false,
-            callback: '',
-            onChapterEnter: [],
-            onChapterExit: []
-        },
 
-        {
-            id: 'london-intro-4',
-            alignment: 'right',
-            hidden: false,
-            title: 'London, United Kingdom',
-            image: '',
-            description: 'xxx',
-            location: {
-                center: [-0.12707, 51.51506],
-                zoom: 13.01,
-                pitch: 57.50,
-                bearing: 0.00
-            },
-            mapAnimation: 'flyTo',
-            rotateAnimation: false,
-            callback: '',
-            onChapterEnter: [],
-            onChapterExit: []
-        },
+        
 
         {
             id: 'conclusion-hidden',
@@ -371,12 +355,31 @@ var config = {
         },
 
         {
+            id: 'conclusion-city-comparison',
+            alignment: 'center',
+            hidden: false,
+            title: '',
+            image: './img/worldData.PNG',
+            description: '<br>"Nine out of ten key global cities experienced PM2.5 reductions from the same period in 2019. In 7 of these identified cities, drastic restrictions on people’s movement and economic activity imposed during lockdowns resulted in PM2.5 reductions of 25-60%, as compared to the same time period last year." <br><br>Studying this phenonema is very important for future policymakers and governments to acknowledge in order to make strides on cleaner air initiatives, which is intrinsically linked to climate change and energy emissions. The data from spring of 2020 shows that it is possible to bring industrial-age air readings down into a healthy range with the right management and policy enforements.<br><br>Source: <a href="https://cms.iqair.com/sites/default/files/documents/REPORT-COVID-19-Impact-on-Air-Quality-in-10-Major-Cities_V6.pdf" target="_blank">COVID-19 AIR QUALITY REPORT</a><br>Photo: IQ AIR',
+            location: {
+                center: [-44.30249, 40.09260],
+                zoom: 2.48,
+                pitch: 23.50,
+            },
+            mapAnimation: 'flyTo',
+            rotateAnimation: false,
+            callback: '',
+            onChapterEnter: [],
+            onChapterExit: []
+        },
+
+        {
             id: 'conclusion-visible',
-            alignment: 'right',
+            alignment: 'center',
             hidden: false,
             title: 'Want to explore more?',
             image: '',
-            description: 'Visit the dashboard <a href="dashboard.html" target="_blank">here</a>.',
+            description: '<br>Visit the <a href="dashboard.html" target="_blank">dashboard</a> to compare and contrast the air quality of Los Angeles and London during the spring of 2020.',
             location: {
                 center: [-44.30249, 40.09260],
                 zoom: 2.48,
