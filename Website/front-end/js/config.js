@@ -40,8 +40,8 @@ var config = {
             alignment: 'center',
             hidden: false,
             title: 'How quickly does air quality improve when the world shuts down?',
-            image: '',
-            description: 'The aim of this website is to investigate whether there is any visual or statistical correlation between changes in fine particulate matter (PM25) measurements between London and Los Angeles leading up to and during the beginning of the Coronavirus pandemic in March of 2020. Due to lockdown measures, would a car-centric city have seen a more drastic improvement in its air quality than a non-car-centric city?<br><br> In order to test this, two cities were chosen that have similarities in total population, population density, and total square footage, but major differences in transportation modalities.',
+            image: 'img/pm25chart.png',
+            description: '<br>The aim of this website is to investigate whether there is any visual or statistical correlation between changes in fine particulate matter (PM25) measurements between London and Los Angeles leading up to and during the beginning of the Coronavirus pandemic in March of 2020. Due to lockdown measures, would a car-centric city have seen a more drastic improvement in its air quality than a non-car-centric city?<br><br> In order to test this, two cities were chosen that have similarities in total population, population density, and total square footage, but major differences in transportation modalities.<br><br>Image: WHO',
             
             location: {
                 center: [-100.08256, 39.07762],
@@ -68,12 +68,12 @@ var config = {
         },
 
         {
-            id: 'la-hidden',
+            id: 'la-hidden-1',
             alignment: 'left',
             hidden: true,
             title: 'Los Angeles, California',
             //image: '/img/losangeles_chapter1.webp',
-            description: '',
+            description: 'xxx',
             location: {
                 center: [-118.32409, 34.03083],
                 zoom: 7.5,
@@ -104,7 +104,7 @@ var config = {
             hidden: false,
             title: 'Los Angeles County, California',
             image: './img/losangeles_chapter1.webp',
-            description: '<br>"Los Angeles is a city notorious for its smog, a combination of particle and ozone pollution. The prevalence of these pollutants result from many factors, including the burning of fossil fuels, especially by vehicles, ships, planes and manufacturing, as well as wildfires.<br><br>The large population of 3.9 million in Los Angeles, with another 6 million in the surrounding Los Angeles county, contributes significantly to the its ‘nonattainment’ air quality status because of heavy vehicular emissions and traffic congestion. It is estimated that there are 6.5 million vehicles in the city of Los Angeles alone." <br><br>Source: <a href="https://www.iqair.com/usa/california/los-angeles" target="_blank">www.iqair.com/usa/california/los-angeles</a><br>Photo: Shutterstock',
+            description: '<br>"Los Angeles is a city notorious for its smog, a combination of particle and ozone pollution. The prevalence of these pollutants result from many factors, including the burning of fossil fuels, especially by vehicles, ships, planes and manufacturing, as well as wildfires.<br><br>The large population of 3.9 million in Los Angeles, with another 6 million in the surrounding Los Angeles county, contributes significantly to the its ‘nonattainment’ air quality status because of heavy vehicular emissions and traffic congestion. It is estimated that there are 6.5 million vehicles in the city of Los Angeles alone." <br><br>Source: <a href="https://www.iqair.com/newsroom/air-quality/report-impact-of-covid-19-on-global-air-quality-earth-day" target="_blank">COVID-19 impact on air quality in 10 major cities</a><br>Photo: Shutterstock',
             
             location: {
                 center: [-118.32560, 33.90192],
@@ -129,12 +129,12 @@ var config = {
         },
 
         {
-            id: 'la-intro-3',
+            id: 'la-hidden-3',
             alignment: 'left',
             hidden: true,
             title: 'Los Angeles, California',
             //image: '/img/losangeles_chapter1.webp',
-            description: '',
+            description: 'xxx',
             location: {
                 center: [-118.32560, 33.90192],
                 zoom: 10.35,
@@ -162,8 +162,8 @@ var config = {
             alignment: 'left',
             hidden: false,
             title: 'Los Angeles County, California',
-            image: './img/empty-streets.webp',
-            description: '<br>"Data collected by EPA governmental monitors and analyzed in the <a href="https://www.iqair.com/blog/air-quality/report-impact-of-covid-19-on-global-air-quality-earth-day" target="_blank">COVID-19 Air Quality Report</a> found that Los Angeles experienced a long stretch of WHO-target air quality (< 10 μg/m3) from March 7-28, 2020, its longest streak since at least 1995. <br><br>This 18-day stretch of exceptionally clean air is likely the result of lockdown measures put in place to reduce the spread of the COVID-19 pandemic, during which non-essential businesses were ordered to close and residents were urged to stay at home. March 2020 became Los Angeles’s cleanest air quality month on record, averaging PM2.5 levels of 5.6 μg/m3."<br><br>Source: <a href="https://www.iqair.com/usa/california/los-angeles" target="_blank">www.iqair.com/usa/california/los-angeles</a><br>Photo: <a href="https://www.theguardian.com/world/2020/mar/28/los-angeles-deserted-coronavirus-outbreak-california" target="_blank">The Guardian</a>',
+            image: './img/pmLevelsLA.PNG',
+            description: '<br>"Data collected by EPA governmental monitors and analyzed in the <a href="https://www.iqair.com/blog/air-quality/report-impact-of-covid-19-on-global-air-quality-earth-day" target="_blank">COVID-19 Air Quality Report</a> found that Los Angeles experienced a long stretch of WHO-target air quality (< 10 μg/m3) from March 7-28, 2020, its longest streak since at least 1995. <br><br>This 18-day stretch of exceptionally clean air is likely the result of lockdown measures put in place to reduce the spread of the COVID-19 pandemic, during which non-essential businesses were ordered to close and residents were urged to stay at home. March 2020 became Los Angeles’s cleanest air quality month on record, averaging PM2.5 levels of 5.6 μg/m3."<br><br>Source: <a href="https://www.iqair.com/usa/california/los-angeles" target="_blank">www.iqair.com/usa/california/los-angeles</a><br>Photo: <a href="https://cms.iqair.com/sites/default/files/documents/REPORT-COVID-19-Impact-on-Air-Quality-in-10-Major-Cities_V6.pdf" target="_blank">IQ Air</a>',
             location: {
                 center: [-118.32560, 33.90192],
                 zoom: 10.35,
@@ -186,12 +186,12 @@ var config = {
         },
 
         {
-            id: 'la-intro-4',
+            id: 'la-hidden-4',
             alignment: 'left',
             hidden: false,
-            title: 'Los Angeles, California',
-            //image: '/assets/losangeles_chapter1.webp',
-            description: 'Something about cleanest air',
+            title: 'Los Angeles County, California',
+            image: './img/LAduringLockdown.PNG',
+            description: '<br>"During Los Angeles’s defined 3-week lockdown period, PM2.5 concentration levels are down by 31% from the same time last year, and down 51% from the average of the prior 4 years."<br>Source: <a href="https://cms.iqair.com/sites/default/files/documents/REPORT-COVID-19-Impact-on-Air-Quality-in-10-Major-Cities_V6.pdf" target="_blank">COVID-19 AIR QUALITY REPORT</a><br>Photo: <a href="https://cms.iqair.com/sites/default/files/documents/REPORT-COVID-19-Impact-on-Air-Quality-in-10-Major-Cities_V6.pdf" target="_blank">IQ Air</a>',
             location: {
                 center: [-118.32560, 33.90192],
                 zoom: 10.35,
@@ -218,10 +218,10 @@ var config = {
         {
             id: 'london-intro-1',
             alignment: 'right',
-            hidden: true,
+            hidden: false,
             title: 'London, United Kingdom',
             image: './img/london_chapter1.webp',
-            description: 'Population - 9 Million, Density - 14,500/sq, Car owners- 2.6 Million  The lockdown starts: 26th March 2020',
+            description: '<br>"In October 2017, London was the first world megacity to sign up to the World Health Organization’s (WHO) “Breathe Life” campaign. The campaign asks cities to commit to meeting the WHO recommended guideline limit for PM2.5 by 2030. <br><br>The average PM2.5 concentration in London was 13.3 µg m-3 and there were no areas in London within the WHO guideline limit. Areas within the city limit had concentrations of PM2.5 between 10 – 12 µg m-3."<br><br>Source <a href="https://www.london.gov.uk/sites/default/files/pm2.5_in_london_october19.pdf" target="_blank">PM2.5 in London:Roadmap to meeting World Health Organization guidelines by 2030</a>',
             location: {
                 center: [-0.10249, 51.47460],
                 zoom: 10.11,
@@ -238,14 +238,14 @@ var config = {
             callback: '',
             onChapterEnter: [
                 {
-                    
+                    layer: 'london-perimeter',
+                    opacity: 1,
+                    duration: 1500
                 }
             ],
             onChapterExit: [
                 {
-                    layer: 'london-perimeter',
-                    opacity: 1,
-                    duration: 1500
+                    
                 }
             ]
         },
@@ -255,8 +255,8 @@ var config = {
             alignment: 'right',
             hidden: false,
             title: 'London, United Kingdom',
-            image: './img/london_chapter1.webp',
-            description: 'Population - 9 Million, Density - 14,500/sq, Car owners- 2.6 Million  The lockdown starts: 26th March 2020',
+            image: './img/LockdownIntro.webp',
+            description: '<br>However, lockdown measures also seemingly had a sudden effect on those levels. <br><br>"The UK followed on March 23 when Prime Minister Boris Johnson announced a lockdown prohibiting non-essential trips, aside from shopping, dealing with health issues, commuting where necessary and exercise. People were instructed to work from home wherever possible. In most European countries, social distancing had been mandated, and large numbers of businesses closed."<br><br>Source: <a href="https://cms.iqair.com/sites/default/files/documents/REPORT-COVID-19-Impact-on-Air-Quality-in-10-Major-Cities_V6.pdf" target="_blank">COVID-19 AIR QUALITY REPORT</a><br>Photo: IQ AIR',
             location: {
                 center: [-0.01805, 51.53370],
                 zoom: 10.49,
@@ -284,8 +284,8 @@ var config = {
             alignment: 'right',
             hidden: false,
             title: 'London, United Kingdom',
-            image: '',
-            description: '“In October 2017 London was the first world megacity to sign up to the World Health Organization’s (WHO) “Breathe Life” campaign. The campaign asks cities to commit to meeting the WHO recommended guideline limit for PM2.5 by 2030. This pledge was subsequently adopted in the statutory London Environment Strategy1 published in May 2018” (from the Doc PM2.5 in London----Roadmap to meeting world health organisation guidelines by 2030) (oct 2019).',
+            image: './img/LondonBarGraph.png',
+            description: '<br>"London experienced reductions in PM2.5 of 9% during their lockdown periods compared to 2019. Contributing factors are likely to include a significant reduction in traffic and power generation (xxx).<br><br> Comparing London’s PM2.5 levels during the 2020 lockdowns to the average of the prior 4 years doesn’t show such a clear downward trend as in comparison to last year alone. Weather conditions and geographical location can greatly influence measured air quality, even after emissions fall. More data quantifying the changing levels of PM2.5 as these cities’ lockdown periods continue will be beneficial to gain a more thorough comparison with previous years." <br><br>Source: <a href="https://cms.iqair.com/sites/default/files/documents/REPORT-COVID-19-Impact-on-Air-Quality-in-10-Major-Cities_V6.pdf" target="_blank">COVID-19 AIR QUALITY REPORT</a>,<br><a href="https://www.telegraph.co.uk/politics/0/lockdown-government-guidance-uk-coronavirus/" target="_blank">The Government 50-page roadmap out of lockdown, explained</a><br>Photo: IQ AIR',
             location: {
                 center: [-0.12707, 51.51506],
                 zoom: 13.01,
@@ -331,7 +331,7 @@ var config = {
             hidden: false,
             title: 'London, United Kingdom',
             image: '',
-            description: 'We believe that changing the way we display the story of pm 2.5 will create a change in Londoners perception and lead to a change in policy ',
+            description: 'xxx',
             location: {
                 center: [-0.12707, 51.51506],
                 zoom: 13.01,
