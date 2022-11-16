@@ -8,8 +8,7 @@ date: "10 Dec 2020"
 
 -->
 
-Website: [https://heyhaiden.github.io/]
-Github Repo: [https://github.com/casa-ucl/casa0017-group-assignment-2022-casa-web-masters]
+## Website: [https://heyhaiden.github.io/]
 
 # Introduction
 
