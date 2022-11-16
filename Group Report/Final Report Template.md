@@ -34,9 +34,9 @@ Aenean nec dolor vitae diam condimentum scelerisque. In sollicitudin turpis sed 
 
 ## Declaration of Authorship
 
-We, ALL AUTHORS NAME HERE, confirm that the work presented in this assessment is my own. Where information has been derived from other sources, I confirm that this has been indicated in the work.
+We, Gil Adda, Andre Bourgeois, and Haiden McGill confirm that the work presented in this assessment is my own. Where information has been derived from other sources, we confirm that this has been indicated in the work.
 
 
-Digitally Sign with Your name Here
+[Digtial Signatures Here]
 
-ASSESSMENT DATE
+16 November 2022
