@@ -330,7 +330,7 @@ var config = {
             hidden: false,
             title: 'London, United Kingdom',
             image: '',
-            description: 'We belive that changing the way we display the the story of pm 2.5 will create a change in Londoners perception and lead to change policy .',
+            description: 'We believe that changing the way we display the story of pm 2.5 will create a change in Londoners perception and lead to a change in policy ',
             location: {
                 center: [-0.12707, 51.51506],
                 zoom: 13.01,
