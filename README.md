@@ -1,38 +1,31 @@
-[![Open in Visual Studio Code](https://classroom.github.com/assets/open-in-vscode-c66648af7eb3fe8bc4f294546bfd86ef473780cde1dea487d3c4ff354943c9ae.svg)](https://classroom.github.com/online_ide?assignment_repo_id=8802571&assignment_repo_type=AssignmentRepo)
-# quarantineAQI: Visualizing the effects of lockdown measures on city-wide PM<sub>2.5</sub> air quality measurements in Los Angeles and London, March 2020
-Final assessment for CASA0017
+<!---
 
-# Inspiration
-xxx
-xxx
-xxx
+---
+title: "CASA0017: Web Architecture Final Assessment"
+author: "Steven Gray, Valerio Signorelli, Duncan Wilson, Sarah Wise"
+date: "10 Dec 2020"
+---
 
-# What it does
-xxx
-xxx
-xxx
+-->
 
-# How we built it
-xxx
-xxx
-xxx
+# quarantineAQI: Visualizing the effects of 2020 lockdown policy on PM₂.₅ air quality measurements in Los Angeles and London
 
-# Challenges we ran into
-xxx
-xxx
-xxx
+Gil Adda, Andre Bourgeois, Haiden McGill, Patrick Whyte
 
-# Accomplishments that we're proud of
-xxx
-xxx
-xxx
+## Abstract
 
-# What's next for quarantineAQI
-xxx
-xxx
-xxx
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus rhoncus libero vel urna ultricies fermentum. Pellentesque felis arcu, tincidunt ac erat eu, vulputate fermentum est. Maecenas ac risus sed velit facilisis eleifend. Nullam ut lorem quam. Nunc et sodales felis. Mauris quam metus, pellentesque at purus eu, interdum tempus velit. Quisque vulputate mauris a condimentum hendrerit. Donec ac mauris sit amet nisl efficitur auctor in ut ligula. Suspendisse vel orci nisl.
 
-# Built With
-xxx
-xxx
-xxx
+## Introduction
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum at efficitur ipsum. Proin egestas mattis commodo. Nunc pulvinar sem eu mauris vehicula tincidunt. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec eleifend ex est, id aliquet nibh tincidunt ac. Cras dictum pretium neque sed varius. Sed ultrices nibh placerat augue viverra iaculis. Sed accumsan ante et nisi ullamcorper varius quis a neque. Mauris ac consequat lectus, ac elementum elit. Vivamus tincidunt ex quis blandit sagittis. Ut sapien mauris, dignissim nec tristique eu, tincidunt sit amet eros. In dignissim nibh vel urna tempor consectetur.
+
+## Conclusion
+
+Aenean nec dolor vitae diam condimentum scelerisque. In sollicitudin turpis sed hendrerit congue. Donec tincidunt tortor eget magna mattis, ac cursus quam pretium. Donec vitae lorem pharetra, aliquet massa eget, condimentum elit. Donec dapibus lobortis felis vitae vestibulum. Maecenas pharetra elit augue, eget placerat ipsum feugiat id. Curabitur gravida lorem eros, eu consectetur lorem bibendum in. Vivamus egestas vulputate lacinia. Sed nunc felis, venenatis nec condimentum placerat, vestibulum non nunc. Mauris vitae massa diam. Maecenas aliquam, risus quis rutrum ullamcorper, nisl diam eleifend arcu, dapibus dictum urna dolor quis neque. Nullam non dui ut leo blandit convallis. Proin iaculis, ante quis posuere egestas, felis tortor sagittis massa, sit amet ornare nisl augue sed nisl. Pellentesque lacinia commodo lacus, a consectetur magna dignissim et. Ut consequat vulputate enim nec facilisis.
+
+## Biblography
+
+1. Last name, First initial. (Year published). Title. Edition. (Only include the edition if it is not the first edition) City published: Publisher, Page(s). <http://google.com>
+
+2. Last name, First initial. (Year published). Title. Edition. (Only include the edition if it is not the first edition) City published: Publisher, Page(s).  <http://google.com>
