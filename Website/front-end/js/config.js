@@ -41,7 +41,39 @@ var config = {
             hidden: false,
             title: 'How quickly does air quality improve when the world shuts down?',
             image: '',
-            description: ' The aim of our website is to investigate whether there is any visual or statistical correlation between changes in AQI measurements between London and Los Angeles leading up to and during the beginning of the Coronavirus pandemic in March of 2020. Due to lockdown measures, >>>>> . When it comes to tackling air pollution and the climate emergency I’m clear that cities like London and Los Angeles have a responsibility to act" (he Mayor of London and Chair of C40 Cities, Sadiq Khan,)>>>>>>>>>>>> would a car-centric city have seen a more drastic improvement in its air quality than a non-car-centric city? >>>>>> In order to test this, two cities were chosen that have similarities among total Car owners , But diffrent population density, and total population >>>>>>>>> . About why we are creating the web side - is that for policy makers, and companies that want to create a thier local standart of air quality. With our AQI index our consumers are more aware to the health causes of PM 2.5 and can act to make a local change for there citizens and employers health.',
+            description: 'The aim of this website is to investigate whether there is any visual or statistical correlation between changes in fine particulate matter (PM25) measurements between London and Los Angeles leading up to and during the beginning of the Coronavirus pandemic in March of 2020. Due to lockdown measures, would a car-centric city have seen a more drastic improvement in its air quality than a non-car-centric city?<br><br> In order to test this, two cities were chosen that have similarities in total population, population density, and total square footage, but major differences in transportation modalities.',
+            
+            location: {
+                center: [-100.08256, 39.07762],
+                zoom: 4.5,
+                pitch: 13.53,
+                bearing: 0.00,
+                speed: 0.2,
+                curve: 2
+            },
+            mapAnimation: 'easeTo',
+            rotateAnimation: false,
+            //callback: '',
+            onChapterEnter: [
+                {
+
+
+                }
+            ],
+            onChapterExit: [
+                {
+
+                }
+            ]
+        },
+
+        {
+            id: 'research-intro',
+            alignment: 'center',
+            hidden: false,
+            title: 'How quickly does air quality improve when the world shuts down?',
+            image: '',
+            description: 'In order to test this, two cities were chosen that have similarities in total population, population density, and total square footage, but major differences in transportation modalities. The car-centric city of Los Angeles ranks highly in car ownership with 2,276,974 registered vehicles in 2019 for a population of just under 3.9 million people during the same time frame. This represents a 58.3% rate of vehicle ownership (European Commission, 2021). A non-car-centric city, London, with 9 million, boasted a much smaller 49.1% rate of vehicle ownership inhabitants during the same timeframe (European Commission, 2021). This hypothesis was posed due to the perceived negative impact of private vehicles on PM25 measurements, which are composed of dissolved droplets of pollutants and other inhalants dangerous to human health (USC Environmental Health Centers , 2021).',
             location: {
                 center: [-100.08256, 39.07762],
                 zoom: 4.5,
