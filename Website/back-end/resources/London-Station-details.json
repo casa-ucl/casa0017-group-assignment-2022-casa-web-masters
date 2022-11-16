@@ -1,0 +1,218 @@
+{
+  "status": "ok",
+  "data": {
+    "aqi": 25,
+    "idx": 5724,
+    "attributions": [
+      {
+        "url": "http://uk-air.defra.gov.uk/",
+        "name": "UK-AIR, air quality information resource - Defra, UK",
+        "logo": "UK-Department-for-environment-food-and-rural-affairs.png"
+      },
+      {
+        "url": "https://londonair.org.uk/",
+        "name": "London Air Quality Network - Environmental Research Group, King's College London",
+        "logo": "UK-London-Kings-College.png"
+      },
+      {
+        "url": "https://waqi.info/",
+        "name": "World Air Quality Index Project"
+      }
+    ],
+    "city": {
+      "geo": [
+        51.5073509,
+        -0.1277583
+      ],
+      "name": "London",
+      "url": "https://aqicn.org/city/london",
+      "location": ""
+    },
+    "dominentpol": "o3",
+    "iaqi": {
+      "co": {
+        "v": 1
+      },
+      "h": {
+        "v": 84
+      },
+      "no2": {
+        "v": 23.8
+      },
+      "o3": {
+        "v": 25.4
+      },
+      "p": {
+        "v": 990.6
+      },
+      "pm10": {
+        "v": 10
+      },
+      "pm25": {
+        "v": 17
+      },
+      "so2": {
+        "v": 2.3
+      },
+      "t": {
+        "v": 9.4
+      },
+      "w": {
+        "v": 3.2
+      }
+    },
+    "time": {
+      "s": "2022-11-15 22:00:00",
+      "tz": "+00:00",
+      "v": 1668549600,
+      "iso": "2022-11-15T22:00:00Z"
+    },
+    "forecast": {
+      "daily": {
+        "o3": [
+          {
+            "avg": 6,
+            "day": "2022-11-13",
+            "max": 17,
+            "min": 2
+          },
+          {
+            "avg": 7,
+            "day": "2022-11-14",
+            "max": 17,
+            "min": 1
+          },
+          {
+            "avg": 22,
+            "day": "2022-11-15",
+            "max": 28,
+            "min": 13
+          },
+          {
+            "avg": 22,
+            "day": "2022-11-16",
+            "max": 28,
+            "min": 17
+          },
+          {
+            "avg": 20,
+            "day": "2022-11-17",
+            "max": 29,
+            "min": 16
+          },
+          {
+            "avg": 10,
+            "day": "2022-11-18",
+            "max": 24,
+            "min": 2
+          },
+          {
+            "avg": 1,
+            "day": "2022-11-19",
+            "max": 1,
+            "min": 1
+          }
+        ],
+        "pm10": [
+          {
+            "avg": 23,
+            "day": "2022-11-13",
+            "max": 27,
+            "min": 16
+          },
+          {
+            "avg": 25,
+            "day": "2022-11-14",
+            "max": 35,
+            "min": 12
+          },
+          {
+            "avg": 9,
+            "day": "2022-11-15",
+            "max": 13,
+            "min": 5
+          },
+          {
+            "avg": 9,
+            "day": "2022-11-16",
+            "max": 14,
+            "min": 4
+          },
+          {
+            "avg": 9,
+            "day": "2022-11-17",
+            "max": 12,
+            "min": 6
+          },
+          {
+            "avg": 19,
+            "day": "2022-11-18",
+            "max": 30,
+            "min": 10
+          },
+          {
+            "avg": 28,
+            "day": "2022-11-19",
+            "max": 28,
+            "min": 28
+          }
+        ],
+        "pm25": [
+          {
+            "avg": 67,
+            "day": "2022-11-13",
+            "max": 77,
+            "min": 52
+          },
+          {
+            "avg": 70,
+            "day": "2022-11-14",
+            "max": 85,
+            "min": 44
+          },
+          {
+            "avg": 25,
+            "day": "2022-11-15",
+            "max": 35,
+            "min": 14
+          },
+          {
+            "avg": 24,
+            "day": "2022-11-16",
+            "max": 30,
+            "min": 14
+          },
+          {
+            "avg": 23,
+            "day": "2022-11-17",
+            "max": 30,
+            "min": 12
+          },
+          {
+            "avg": 44,
+            "day": "2022-11-18",
+            "max": 63,
+            "min": 25
+          },
+          {
+            "avg": 63,
+            "day": "2022-11-19",
+            "max": 63,
+            "min": 63
+          }
+        ],
+        "uvi": [
+          {
+            "avg": 0,
+            "day": "2022-10-24",
+            "max": 0,
+            "min": 0
+          }
+        ]
+      }
+    },
+    "debug": {
+      "sync": "2022-11-16T07:45:19+09:00"
+    }
+  }
+}
