@@ -68,30 +68,41 @@
 
     <!-- comparison tabel styles -->
     <style>
-        /* Add a background color to the first row (header row) */
-        #dynamic-table thead tr {
-            background-color: lightgray;
-        }
+      /* Add a background color to the first row (header row) */
+      #dynamic-table thead tr {
+        background-color: lightgray;
+      }
 
-        .score-1 {
-            background-color: lightgreen;
-        }
+      .score-1 {
+        background-color: lightgreen;
+      }
 
-        .score-2 {
-            background-color: rgb(255, 255, 149);
-        }
+      .score-2 {
+        background-color: rgb(255, 255, 149);
+      }
 
-        .score-3 {
-            background-color: rgb(255, 188, 100);
-        }
+      .score-3 {
+        background-color: rgb(255, 188, 100);
+      }
 
-        .score-4 {
-            background-color: rgb(255, 127, 72);
-        }
+      .score-4 {
+        background-color: rgb(255, 127, 72);
+      }
 
-        .score-5 {
-            background-color: rgb(223, 28, 28);
-        }
+      .score-5 {
+        background-color: rgb(223, 28, 28);
+      }
+
+      .custom-marker {
+        width: 30px;
+        height: 30px;
+        border-radius: 50%;
+        text-align: center;
+        font-weight: bold;
+        color: black;
+        line-height: 30px;
+        cursor: pointer;
+      }
     </style>
 
     <!-- main content -->
@@ -144,7 +155,6 @@
             var lon = -0.1276;
             var mainAQI = 0;
             var pm2_5 = 0;
-
 
             // whenever the marker is moved (by dragging or clicking) we update the lat lon values and then get the current AQ data
             marker.on("dragend", function () {
@@ -230,7 +240,10 @@
             </table>
             <button class="btn btn-primary" id="add-row">Add Row</button>
           </div>
+
           <script>
+            var markers = {};
+
             $(document).ready(function () {
               let rowCount = 0;
 
@@ -247,6 +260,9 @@
                         </tr>
                     `;
                 $("#dynamic-table tbody").append(newRow);
+
+                // add a new marker to the map
+                addNewMarkerToMap(rowCount);
               }
 
               // Handle "Add Row" button click
@@ -262,9 +278,59 @@
                   const rowId = $(this).data("id");
                   $(this).closest("tr").remove();
                   console.log(`Row ${rowId} deleted.`);
+
+                  //delete the map marker
+                  deleteMarker(rowId);
                 }
               );
             });
+
+            function addNewMarkerToMap(id) {
+              var markerColour;
+
+              switch (mainAQI) {
+                case 1:
+                  markerColour = "rgb(144, 239, 144)";
+                  break;
+                case 2:
+                  markerColour = "rgb(255, 255, 149)";
+                  break;
+                case 3:
+                  markerColour = "rgb(255, 188, 100)";
+                  break;
+                case 4:
+                  markerColour = "rgba(255, 127, 72, 0.5)";
+                  break;
+                case 5:
+                  markerColour = "rgba(223, 28, 28, 0.5)";
+                  break;
+              }
+
+              var marker = new mapboxgl.Marker({
+                element: createCustomMarker(markerColour, id),
+              })
+                .setLngLat([lon, lat])
+                .addTo(map1);
+
+              // add marker to list of markers later with the id so it can be referenced later to delete
+              markers[id] = marker;
+            }
+
+            function createCustomMarker(rgbColor, label) {
+              var markerElement = document.createElement("div");
+              markerElement.className = "custom-marker";
+              markerElement.style.backgroundColor = rgbColor;
+              markerElement.textContent = label;
+
+              return markerElement;
+            }
+
+            function deleteMarker(id) {
+              if (markers[id]) {
+                markers[id].remove(); // Remove the marker from the map
+                delete markers[id]; // Remove the marker reference
+              }
+            }
           </script>
         </div>
       </div>
