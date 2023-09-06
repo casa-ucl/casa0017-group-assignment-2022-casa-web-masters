@@ -164,7 +164,7 @@
           let medsLA = [];
 
           //get json file, allocate data to dataLA
-          $.getJSON("../back-end/resources/dataLA.json", function(dataLA) {
+          $.getJSON("back-end/resources/dataLA.json", function(dataLA) {
             //for each object in dataLA
             $.each(dataLA, function (k, v) {
               // create variables, set it to the value of corrseponding keys
@@ -181,7 +181,7 @@
           })
 
           //get json file, allocate data to dataLondon
-          $.getJSON("../back-end/resources/dataLondon.json", function (dataLondon) {
+          $.getJSON("back-end/resources/dataLondon.json", function (dataLondon) {
             //for each object in dataLondon
             $.each(dataLondon, function (k, v) {
               // create variables, set it to the value of corrseponding keys
