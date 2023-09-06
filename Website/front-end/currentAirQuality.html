@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>quarantineAQI - Dashboard</title>
+    <link rel="icon" type="image/x-icon" href="./img/coronavirus.png" />
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+
+    <!-- Bootstrap CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
+
+    <!-- Custom styling  -->
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/map.css" />
+
+    <!-- Mapbox -->
+    <link
+      href="https://api.mapbox.com/mapbox-gl-js/v2.10.0/mapbox-gl.css"
+      rel="stylesheet"
+    />
+    <script src="https://api.mapbox.com/mapbox-gl-js/v2.10.0/mapbox-gl.js"></script>
+
+    <!-- Jquery -->
+    <script
+      type="text/javascript"
+      src="https://code.jquery.com/jquery-3.5.1.js"
+    ></script>
+
+    <!-- Timeline -->
+    <script
+      type="text/javascript"
+      src="../node_modules/timelinejs-slider/dist/js/timeline.min.js"
+    ></script>
+    <link
+      type="stylesheet"
+      href="../node_modules/timelinejs-slider/dist/css/timeline.min.css"
+    />
+
+    <!-- Highchart API -->
+    <script src="https://code.highcharts.com/highcharts.js"></script>
+    <script src="https://code.highcharts.com/modules/series-label.js"></script>
+    <script src="https://code.highcharts.com/modules/data.js"></script>
+  </head>
+
+  <body>
+    <!-- nav bar -->
+    <!-- placeholder to be replaced with top navigation bar -->
+    <div class="navPlaceholder"></div>
+
+    <!-- jquery to get top navigation bar from navBar.html -->
+    <script>
+      // gets top navigation bar and places it in topNav
+      $.get("pageElements/navBar.html", function (topNav) {
+        // replaces navPlaceholder with topNav
+        $(".navPlaceholder").replaceWith(topNav);
+      });
+    </script>
+    <!-- end of nav bar -->
+
+    <!-- comparison tabel styles -->
+    <style>
+      /* Add a background color to the first row (header row) */
+      #dynamic-table thead tr {
+        background-color: lightgray;
+      }
+
+      .score-1 {
+        background-color: lightgreen;
+      }
+
+      .score-2 {
+        background-color: rgb(255, 255, 149);
+      }
+
+      .score-3 {
+        background-color: rgb(255, 188, 100);
+      }
+
+      .score-4 {
+        background-color: rgb(255, 127, 72);
+      }
+
+      .score-5 {
+        background-color: rgb(223, 28, 28);
+      }
+
+      .custom-marker {
+        width: 30px;
+        height: 30px;
+        border-radius: 50%;
+        text-align: center;
+        font-weight: bold;
+        color: black;
+        line-height: 30px;
+        cursor: pointer;
+      }
+    </style>
+
+    <!-- main content -->
+
+    <div class="container text-center" style="padding: 100px 0px 0px 0px">
+      <!-- row containing map titles -->
+      <div class="row" style="padding: 20px">
+        <div class="col-6" style="padding-right: 20px">
+          <h2>Check Current Air Quality</h2>
+          <h6>
+            Move the marker on the map to see the current air quality at that
+            location!
+          </h6>
+        </div>
+        <div class="col-6" style="padding-left: 20px">
+          <h2>Compare Air Quality At Marker Locations</h2>
+          <h6>
+            Score: 1 = Good, 2 = Fair, 3 = Moderate, 4 = Poor, 5 = Very Poor
+          </h6>
+        </div>
+      </div>
+      <!-- row containing maps -->
+      <div class="row" style="padding: 0px 0px 70px 0px">
+        <script src="https://d3js.org/d3.v3.min.js" charset="utf-8"></script>
+
+        <!-- Current Air Quality Selector Map -->
+        <div class="col-6" style="padding-right: 20px" position="start">
+          <div id="map1" style="width: 100%; height: 500px"></div>
+
+          <script>
+            mapboxgl.accessToken =
+              "pk.eyJ1IjoiaGV5aGFpZGVuIiwiYSI6ImNsOWd5d2kzYTJjNm0zd3F0Y3JpYjBzbHkifQ.n54i9juDJo3yjB5iFuHohA";
+            const map1 = new mapboxgl.Map({
+              container: "map1", // container ID
+              style: "mapbox://styles/heyhaiden/cl9obhcq600mg15l381brmm4n", // style URL
+              center: [-0.1276, 51.5072], // starting position in London
+              zoom: 5, // starting zoom
+            });
+            map1.on("style.load", () => {
+              map1.setFog({}); // Set the default atmosphere style
+            });
+
+            //add a marker to show where the current air quality info is coming from
+            var marker = new mapboxgl.Marker({ draggable: true })
+              .setLngLat([-0.1276, 51.5072])
+              .addTo(map1);
+
+            // set up global variables
+            var lat = 51.5072;
+            var lon = -0.1276;
+            var mainAQI = 0;
+            var pm2_5 = 0;
+
+            // whenever the marker is moved (by dragging or clicking) we update the lat lon values and then get the current AQ data
+            marker.on("dragend", function () {
+              var lngLat = marker.getLngLat();
+              lat = lngLat.lat.toPrecision(5);
+              lon = lngLat.lng.toPrecision(5);
+
+              getCurrentAirQualityData(lat, lon);
+            });
+
+            map1.on("click", function (e) {
+              var lngLat = e.lngLat;
+              marker.setLngLat(lngLat);
+              lat = lngLat.lat.toPrecision(5);
+              lon = lngLat.lng.toPrecision(5);
+
+              getCurrentAirQualityData(lat, lon);
+            });
+
+            // Function to get current air quality data from the OpenWeather API
+            function getCurrentAirQualityData(latitude, longitude) {
+              const apiKey = "fe66c35ecf283a05b122f84d7c99a6ad";
+
+              // Construct the API URL with the provided latitude, longitude, and API key
+              const apiUrl = `http://api.openweathermap.org/data/2.5/air_pollution?lat=${latitude}&lon=${longitude}&appid=${apiKey}`;
+
+              // Send a GET request to the OpenWeather API
+              fetch(apiUrl)
+                .then((response) => {
+                  if (!response.ok) {
+                    throw new Error(`HTTP error! Status: ${response.status}`);
+                  }
+                  return response.json();
+                })
+                .then((data) => {
+                  // Extract the main AQI and PM2.5 values from the response
+                  mainAQI = data.list[0].main.aqi;
+                  pm2_5 = data.list[0].components.pm2_5;
+
+                  console.log("Main AQI:", mainAQI);
+                  console.log("PM2.5:", pm2_5);
+
+                  //update the values under the map
+                  document.getElementById("scoreVal").textContent = mainAQI;
+                  document.getElementById("pm2_5Val").textContent = pm2_5;
+                })
+                .catch((error) => {
+                  // Handle any errors that occurred during the fetch
+                  console.error("Error:", error);
+                });
+            }
+          </script>
+
+          <div id="stats" class="stats">
+            <div class="statsText">
+              <p style="float: left; padding-left: 10px">Current Air Quality</p>
+              <p style="float: left; padding-left: 20px">
+                Score: <span id="scoreVal"></span>
+              </p>
+              <p style="float: left; padding-left: 20px">
+                PM2.5: <span id="pm2_5Val"></span> μg/m^3
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Comparison tabel -->
+        <div class="col-6" style="padding-left: 20px">
+          <div class="container mt-5">
+            <table class="table table-bordered" id="dynamic-table">
+              <thead>
+                <tr>
+                  <th>ID</th>
+                  <th>Latitude</th>
+                  <th>Longitude</th>
+                  <th>PM2.5 (μg/m3)</th>
+                  <th>Score</th>
+                </tr>
+              </thead>
+              <tbody>
+                <!-- Table body will be populated dynamically -->
+              </tbody>
+            </table>
+            <button class="btn btn-primary" id="add-row">Add Row</button>
+          </div>
+
+          <script>
+            var markers = {};
+
+            $(document).ready(function () {
+              let rowCount = 0;
+
+              function addRow() {
+                rowCount++;
+                const newRow = `
+                        <tr>
+                            <td>${rowCount}</td>
+                            <td>${lat}</td>
+                            <td>${lon}</td>
+                            <td>${pm2_5}</td>
+                            <td class="score-${mainAQI}">${mainAQI}</td>
+                            <td><button class="btn btn-danger btn-sm" data-id="${rowCount}">Delete</button></td>
+                        </tr>
+                    `;
+                $("#dynamic-table tbody").append(newRow);
+
+                // add a new marker to the map
+                addNewMarkerToMap(rowCount);
+              }
+
+              // Handle "Add Row" button click
+              $("#add-row").click(function () {
+                addRow();
+              });
+
+              // Handle delete button click
+              $("#dynamic-table tbody").on(
+                "click",
+                "button.btn-danger",
+                function () {
+                  const rowId = $(this).data("id");
+                  $(this).closest("tr").remove();
+                  console.log(`Row ${rowId} deleted.`);
+
+                  //delete the map marker
+                  deleteMarker(rowId);
+                }
+              );
+            });
+
+            function addNewMarkerToMap(id) {
+              var markerColour;
+
+              switch (mainAQI) {
+                case 1:
+                  markerColour = "rgb(144, 239, 144)";
+                  break;
+                case 2:
+                  markerColour = "rgb(255, 255, 149)";
+                  break;
+                case 3:
+                  markerColour = "rgb(255, 188, 100)";
+                  break;
+                case 4:
+                  markerColour = "rgb(255, 127, 72)";
+                  break;
+                case 5:
+                  markerColour = "rgb(223, 28, 28)";
+                  break;
+              }
+
+              var marker = new mapboxgl.Marker({
+                element: createCustomMarker(markerColour, id),
+              })
+                .setLngLat([lon, lat])
+                .addTo(map1);
+
+              // add marker to list of markers later with the id so it can be referenced later to delete
+              markers[id] = marker;
+            }
+
+            function createCustomMarker(rgbColor, label) {
+              var markerElement = document.createElement("div");
+              markerElement.className = "custom-marker";
+              markerElement.style.backgroundColor = rgbColor;
+              markerElement.textContent = label;
+
+              return markerElement;
+            }
+
+            function deleteMarker(id) {
+              if (markers[id]) {
+                markers[id].remove(); // Remove the marker from the map
+                delete markers[id]; // Remove the marker reference
+              }
+            }
+          </script>
+        </div>
+      </div>
+    </div>
+
+    <!-- end of main content-->
+
+    <!-- footer bar -->
+    <!-- placeholder to be replaced with footer bar -->
+    <div class="footPlaceholder"></div>
+
+    <!-- jquery to get footer bar from footerBar.html -->
+    <script>
+      // gets footer bar and places it in footerBar
+      $.get("pageElements/footerBar.html", function (footerBar) {
+        // replaces footPlaceholder with footerBar
+        $(".footPlaceholder").replaceWith(footerBar);
+      });
+    </script>
+    <!-- end of footer bar -->
+
+    <!-- JS scripts under here -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js"
+      integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js"
+      integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
