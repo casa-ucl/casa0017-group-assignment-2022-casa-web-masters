@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>quarantineAQI  Resources</title>
+    <link rel="icon" type="image/x-icon" href="./img/coronavirus.png">
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    
+    <!-- Custom styling  -->
+    <link rel="stylesheet" href="css/style.css">
+
+    <!-- Mapbox -->
+    <link href='https://api.mapbox.com/mapbox-gl-js/v2.10.0/mapbox-gl.css' rel='stylesheet' />
+    <script src='https://api.mapbox.com/mapbox-gl-js/v2.10.0/mapbox-gl.js'></script>
+
+    <!-- Jquery -->
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.5.1.js"></script>
+
+  </head>
+  <body>
+  <!-- nav bar -->
+    <!-- placeholder to be replaced with top navigation bar -->
+    <div class="navPlaceholder">
+
+    </div>
+
+    <!-- jquery to get top navigation bar from navBar.html -->
+    <script>
+      // gets top navigation bar and places it in topNav
+      $.get("pageElements/navBar.html", function(topNav){
+        // replaces navPlaceholder with topNav
+        $(".navPlaceholder").replaceWith(topNav);
+      });
+    </script>
+  <!-- end of nav bar -->
+
+  <!--main content-->
+  <div style="padding: 100px 50px 0px 50px">
+    <!-- row containing map titles -->
+    <div class="row" style="padding: 20px">
+      <div class="col" style="float: left;">
+        <h4>Air quality in Los Angeles</h4>
+        <p><a href="https://www.iqair.com/usa/california/los-angeles" target="_blank">www.iqair.com/usa/california/los-angeles</a></p>
+        <br>
+        <h4>COVID-19 impact on air quality in 10 major cities (2022)</h4>
+        <p><a href="https://www.iqair.com/newsroom/air-quality/report-impact-of-covid-19-on-global-air-quality-earth-day">https://www.iqair.com/newsroom/air-quality/report-impact-of-covid-19-on-global-air-quality-earth-day</a></p>
+        <br>
+        <h4>COVID-19 Air Quality Report: Coronavirus pandemic lockdowns result in unprecedented reductions in deadly particle pollution (2020)</h4>
+        <p><a href="https://cms.iqair.com/sites/default/files/documents/REPORT-COVID-19-Impact-on-Air-Quality-in-10-Major-Cities_V6.pdf" target="_blank">https://cms.iqair.com/sites/default/files/documents/REPORT-COVID-19-Impact-on-Air-Quality-in-10-Major-Cities_V6.pdf</a>
+        <br>
+        </p>
+        <br>
+        <h4>The Government's 50-page roadmap out of lockdown, explained (2020)</h4>
+        <p><a href="https://www.telegraph.co.uk/politics/0/lockdown-government-guidance-uk-coronavirus/" target="_blank">https://www.telegraph.co.uk/politics/0/lockdown-government-guidance-uk-coronavirus/</a>
+      </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- footer bar -->
+    <!-- placeholder to be replaced with footer bar -->
+    <div class="footPlaceholder">
+
+    </div>
+
+    <!-- jquery to get footer bar from footerBar.html -->
+    <script>
+      // gets footer bar and places it in footerBar
+      $.get("pageElements/footerBar.html", function(footerBar){
+        // replaces footPlaceholder with footerBar
+        $(".footPlaceholder").replaceWith(footerBar);
+      });
+    </script>
+    <!-- end of footer bar -->
+    
+
+    <!-- JS scripts under here -->
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    
+  </body>
+</html>
